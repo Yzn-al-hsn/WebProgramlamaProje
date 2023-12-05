@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Nitro\Source\Repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Nitro/Source/Repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/ClinicWorkTimes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljV29ya1RpbWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nitro/Source/Repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Clinic/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nitro/Source/Repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -24,12 +32,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Nitro/Source/Repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Hospital/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nitro/Source/Repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nitro/Source/Repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nitro/Source/Repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Town/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG93blxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nitro/Source/Repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/_ViewImports.cshtml]

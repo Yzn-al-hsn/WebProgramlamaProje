@@ -1,6 +1,6 @@
 ﻿namespace WebProgramalamaProje.Models
 {
-    public class ClinicWorkTimes
+    public class ClinicWorkTimesModel
     {
         public int Id { get; set; }
         public int ClinicId { get; set; }
