@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nitro\\Source\\Repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj": {}
+    "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nitro\\Source\\Repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj": {
+    "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nitro\\Source\\Repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj",
+        "projectUniqueName": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj",
         "projectName": "WebProgramalamaProje",
-        "projectPath": "C:\\Users\\Nitro\\Source\\Repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj",
+        "projectPath": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj",
         "packagesPath": "C:\\Users\\Nitro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nitro\\Source\\Repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\obj\\",
+        "outputPath": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
