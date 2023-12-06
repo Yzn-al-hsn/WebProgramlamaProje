@@ -9,7 +9,7 @@ namespace WebProgramalamaProje.Controllers
         {
             return View();
         }
-
+        [HttpPost]
         public IActionResult List()
         {
             return View();
@@ -17,6 +17,7 @@ namespace WebProgramalamaProje.Controllers
         public IActionResult Create() {
             return View();
         }
+        [HttpPost]
 
         public IActionResult Create(AppointmentModel model)
         {
@@ -26,11 +27,13 @@ namespace WebProgramalamaProje.Controllers
         {
             return View();
         }
+        [HttpPost]
 
         public IActionResult Edit(AppointmentModel model)
         { 
             return View();
         }
+        [HttpPost]
 
         public IActionResult Delete(int id)
         {
