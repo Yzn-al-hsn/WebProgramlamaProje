@@ -3,11 +3,9 @@ using WebProgramalamaProje.Models.NonEntity;
 
 namespace WebProgramalamaProje.Models
 {
-    public class AdminModel
+    public class AdminModel : Person
     {
-        
-        public Person Person { get; set; }
         public string Email { get; set; }
-        public Role Role { get; set; }
+        public int RoleId { get; set; }
     }
 }

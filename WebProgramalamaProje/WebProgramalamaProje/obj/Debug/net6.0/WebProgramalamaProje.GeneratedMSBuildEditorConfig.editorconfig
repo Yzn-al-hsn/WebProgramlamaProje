@@ -16,12 +16,32 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Nitro\source\repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Appointment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Client/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/ClinicWorkTimes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljV29ya1RpbWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Clinic/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/DoctorWorkTimes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yV29ya1RpbWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Doctor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Home/Index.cshtml]

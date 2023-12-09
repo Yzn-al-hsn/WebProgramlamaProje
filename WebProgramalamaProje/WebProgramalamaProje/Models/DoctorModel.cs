@@ -1,11 +1,13 @@
-﻿using WebProgramalamaProje.Models.NonEntity;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using WebProgramalamaProje.Models.NonEntity;
 
 namespace WebProgramalamaProje.Models
 {
-    public class DoctorModel
+    public class DoctorModel : Person
     {
-        public Person Person { get; set; }
+        [ForeignKey(nameof(ClinicModel))]
         public int ClinicId { get; set; }
+        public ClinicModel Clinic { get; set; }
 
     }
 }
