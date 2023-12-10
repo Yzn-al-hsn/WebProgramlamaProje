@@ -10,7 +10,7 @@ namespace WebProgramalamaProje.Controllers
             return View();
         }
 
-        public async Task<IActionResult> List()
+        public IActionResult List()
         {
             return View();
         }
@@ -18,6 +18,7 @@ namespace WebProgramalamaProje.Controllers
         {
             return View();
         }
+        [HttpPost]
 
         public async Task<IActionResult> Create(AppointmentModel model)
         {
@@ -27,11 +28,13 @@ namespace WebProgramalamaProje.Controllers
         {
             return View();
         }
+        [HttpPost]
 
         public async Task<IActionResult> Edit(AppointmentModel model)
         { 
             return View();
         }
+        [HttpPost]
 
         public async Task<IActionResult> Delete(int id)
         {
