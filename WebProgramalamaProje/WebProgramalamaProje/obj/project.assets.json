@@ -10692,11 +10692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MHD OMAR\\Source\\Repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj",
+      "projectUniqueName": "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj",
       "projectName": "WebProgramalamaProje",
-      "projectPath": "C:\\Users\\MHD OMAR\\Source\\Repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj",
+      "projectPath": "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj",
       "packagesPath": "C:\\Users\\MHD OMAR\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MHD OMAR\\Source\\Repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\obj\\",
+      "outputPath": "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MHD OMAR\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10767,5 +10767,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
