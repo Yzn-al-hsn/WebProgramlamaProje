@@ -5,37 +5,35 @@ namespace WebProgramalamaProje.Controllers
 {
     public class AppointmentController : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult List()
-        {
-            return View();
-        }
-        public IActionResult Create() {
-            return View();
-        }
-        [HttpPost]
 
-        public IActionResult Create(AppointmentModel model)
+        public async Task<IActionResult> List()
         {
             return View();
         }
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Create() 
         {
             return View();
         }
-        [HttpPost]
 
-        public IActionResult Edit(AppointmentModel model)
+        public async Task<IActionResult> Create(AppointmentModel model)
+        {
+            return View();
+        }
+        public async Task<IActionResult> Edit(int id)
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> Edit(AppointmentModel model)
         { 
             return View();
         }
-        [HttpPost]
 
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             return View();
         }

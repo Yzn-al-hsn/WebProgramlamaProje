@@ -5,41 +5,41 @@ namespace WebProgramalamaProje.Controllers
 {
     public class ClinicWorkTimesController : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult List()
+        public async Task<IActionResult> List()
         {
             return View();
         }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Create(ClinicWorkTimesModel model)
-        {
-            return View();
-        }
-
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Create()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Edit(ClinicWorkTimesModel model)
+        public async Task<IActionResult> Create(ClinicWorkTimesModel model)
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> Edit(int id)
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Edit(ClinicWorkTimesModel model)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
         {
             return View();
         }

@@ -5,41 +5,41 @@ namespace WebProgramalamaProje.Controllers
 {
     public class HospitalController : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult List()
+        public async Task<IActionResult> List()
         {
             return View();
         }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Create(HospitalModel model)
-        {
-            return View();
-        }
-
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Create()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Edit(HospitalModel model)
+        public async Task<IActionResult> Create(HospitalModel model)
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> Edit(int id)
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Edit(HospitalModel model)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
         {
             return View();
         }
