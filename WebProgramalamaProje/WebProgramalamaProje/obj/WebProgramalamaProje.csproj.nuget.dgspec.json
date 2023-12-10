@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj": {}
+    "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj": {
+    "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj",
+        "projectUniqueName": "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj",
         "projectName": "WebProgramalamaProje",
-        "projectPath": "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj",
+        "projectPath": "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj",
         "packagesPath": "C:\\Users\\MHD OMAR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\obj\\",
+        "outputPath": "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MHD OMAR\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -50,8 +50,14 @@
               "version": "[6.0.25, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.25, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
             }
           },
           "imports": [
