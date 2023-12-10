@@ -5,20 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="~/css/all.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- Tempusdominus Bootstrap 4 -->
-    <link rel="stylesheet" href="~/css/tempusdominus-bootstrap-4.min.css">
-    <!-- iCheck -->
-    <link rel="stylesheet" href="~/css/icheck-bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="~/css/adminlte.min.css">
-    <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="~/css/OverlayScrollbars.min.css">
-    <!-- summernote -->
-    <link rel="stylesheet" href="~/css/summernote-bs4.min.css">
+    <link rel="stylesheet" href="~/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -184,6 +174,29 @@
                         <!-- Add icons to the links using the .nav-icon class
                              with font-awesome or any other icon font library -->
                         <li class="nav-header">EXAMPLES</li>
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-user"></i>
+                                <p>
+                                    Person
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Client</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="nav-item">
                             <a asp-controller="Town" asp-action="Index" class="nav-link">
                                 <i class="nav-icon far fa-image"></i>
@@ -194,7 +207,7 @@
                         </li>
                         <li class="nav-item">
                             <a asp-controller="Hospital" asp-action="Index" class="nav-link">
-                                <i class="nav-icon far fa-image"></i>
+                                <i class="nav-icon far fa-hospital"></i>
                                 <p>
                                     Hospitals
                                 </p>
@@ -210,25 +223,9 @@
                         </li>
                         <li class="nav-item">
                             <a asp-controller="Doctor" asp-action="Index" class="nav-link">
-                                <i class="nav-icon far fa-image"></i>
+                                <i class="nav-icon fa fa-user-md"></i>
                                 <p>
                                     Doctors
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a asp-controller="Admin" asp-action="Index" class="nav-link">
-                                <i class="nav-icon far fa-image"></i>
-                                <p>
-                                    Admins
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a asp-controller="Client" asp-action="Index" class="nav-link">
-                                <i class="nav-icon far fa-image"></i>
-                                <p>
-                                    Clients
                                 </p>
                             </a>
                         </li>
@@ -271,36 +268,13 @@
         </aside>
         <!-- /.control-sidebar -->
     </div>
-    <!-- ./wrapper -->
+
     <!-- jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <!-- jQuery UI 1.11.4 -->
-    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-    <script>
-        $.widget.bridge('uibutton', $.ui.button)
-    </script>
+    <script src="~/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- ChartJS -->
-    <script src="plugins/chart.js/Chart.min.js"></script>
-    <!-- Sparkline -->
-    <script src="plugins/sparklines/sparkline.js"></script>
-    <!-- jQuery Knob Chart -->
-    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-    <!-- daterangepicker -->
-    <!-- Tempusdominus Bootstrap 4 -->
-    <script src="~/js/tempusdominus-bootstrap-4.min.js"></script>
-    <!-- Summernote -->
-    <script src="~/summernote-bs4.min.js"></script>
-    <!-- overlayScrollbars -->
-    <script src="~/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="~/js/adminlte.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="~/js/demo.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="~/js/pages/dashboard.js"></script>
+    <script src="~/dist/js/adminlte.min.js"></script>
 
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
