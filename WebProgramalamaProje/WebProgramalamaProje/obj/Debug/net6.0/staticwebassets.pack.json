@@ -5,16 +5,80 @@
       "PackagePath": "staticwebassets\\WebProgramalamaProje.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\css\\OverlayScrollbars.min.css",
+      "PackagePath": "staticwebassets\\css\\OverlayScrollbars.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\css\\adminlte.min.css",
+      "PackagePath": "staticwebassets\\css\\adminlte.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\css\\adminlte.min.css.map",
+      "PackagePath": "staticwebassets\\css\\adminlte.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\css\\icheck-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\icheck-bootstrap.min.css"
+    },
+    {
       "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\css\\summernote-bs4.min.css",
+      "PackagePath": "staticwebassets\\css\\summernote-bs4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\css\\tempusdominus-bootstrap-4.min.css",
+      "PackagePath": "staticwebassets\\css\\tempusdominus-bootstrap-4.min.css"
     },
     {
       "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\OverlayScrollbars.min.js",
+      "PackagePath": "staticwebassets\\js\\OverlayScrollbars.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\adminlte.js",
+      "PackagePath": "staticwebassets\\js\\adminlte.js"
+    },
+    {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\adminlte.js.map",
+      "PackagePath": "staticwebassets\\js\\adminlte.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\dashboard.js",
+      "PackagePath": "staticwebassets\\js\\dashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\demo.js",
+      "PackagePath": "staticwebassets\\js\\demo.js"
+    },
+    {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\jquery.overlayScrollbars.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.overlayScrollbars.min.js"
+    },
+    {
       "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\summernote-bs4.min.js",
+      "PackagePath": "staticwebassets\\js\\summernote-bs4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\summernote-bs4.min.js.map",
+      "PackagePath": "staticwebassets\\js\\summernote-bs4.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\tempusdominus-bootstrap-4.min.js",
+      "PackagePath": "staticwebassets\\js\\tempusdominus-bootstrap-4.min.js"
     },
     {
       "Id": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\lib\\bootstrap\\LICENSE",

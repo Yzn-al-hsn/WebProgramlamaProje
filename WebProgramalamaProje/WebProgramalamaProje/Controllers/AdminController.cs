@@ -5,38 +5,38 @@ namespace WebProgramalamaProje.Controllers
 {
     public class AdminController : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult List() 
+        public async Task<IActionResult> List() 
         { 
             return View();
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult Create(AdminModel model)
+        public async Task<IActionResult> Create(AdminModel model)
         {
             return View();
         }
         [HttpPost]
 
-        public IActionResult Edit(AdminModel model)
+        public async Task<IActionResult> Edit(AdminModel model)
         {
             return View();
         }
 
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
             return View();
         }
         [HttpPost]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             return View();
         }
