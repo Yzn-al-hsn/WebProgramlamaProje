@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1jeOXoyqyXTbnkYqPrsOGNwlMKuuZW3aCdQD09PMW/Wp6s/XZdxxJ+U+gUmF8zVZ7bX4aiBe9P8SlQlhq9EzHQ==",
+  "dgSpecHash": "WV5c52YzWR05C8b/wJUW3dIU+2su8J5QyutV8plUC08FvGrYWfj8OLnRR/HIuWzrco/aiyZirJYZkwGasD1Shw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MHD OMAR\\Source\\Repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj",
+  "projectFilePath": "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\WebProgramalamaProje.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MHD OMAR\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\MHD OMAR\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
