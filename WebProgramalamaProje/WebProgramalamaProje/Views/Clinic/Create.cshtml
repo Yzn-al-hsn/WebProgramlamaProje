@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Create";
+}
+
+@model WebProgramalamaProje.Models.CombinedModels.ClinicHospitalModel;
+
+@{
+    Layout = "_LayoutAdmin";
+
+    ViewData["Title"] = "Edit";
+}
+<h1>Create</h1>
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Clinic.Name">Hospital Name</label>
+        <input asp-for="Clinic.Name" class="form-control" placeholder="Hospital Name">
+        <span asp-validation-for="Clinic.Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Clinic.HospitalId">Hospital</label>
+        <select class="form-control" asp-for="Clinic.HospitalId">
+            @foreach (var hospital in Model.Hospitals)
+            {
+                <option value="@hospital.Id">@hospital.Name</option>
+            }
+        </select>
+        <span asp-validation-for="Clinic.HospitalId" class="text-danger"></span>
+    </div>
+    
+    <button type="submit" value="Save" class="btn btn-primary mt-3">Submit</button>
+    <a class="btn btn-secondary mt-3" asp-controller="Clinic" asp-action="Index">
+        Back to list
+    </a>
+
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

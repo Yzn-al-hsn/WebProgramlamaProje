@@ -32,8 +32,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/ClinicWorkTimes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljV29ya1RpbWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/ClinicWorkTimes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljV29ya1RpbWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/ClinicWorkTimes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljV29ya1RpbWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/ClinicWorkTimes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljV29ya1RpbWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/ClinicWorkTimes/_ClinicWorkTimes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljV29ya1RpbWVzXF9DbGluaWNXb3JrVGltZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Clinic/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Clinic/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Clinic/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Clinic/Index.cshtml]

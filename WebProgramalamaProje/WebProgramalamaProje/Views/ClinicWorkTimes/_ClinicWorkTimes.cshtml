@@ -1,0 +1,38 @@
+﻿@model List<ClinicWorkTimesModel>
+@using WebProgramalamaProje.Services;
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Day
+            </th>
+            <th>
+                Start Hour
+            </th>
+            <th>
+                End Hour
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Utils.GetDayAsString(item.Day)
+                </td>
+                <td>
+                    @item.ShiftStart.ToShortTimeString()
+                </td>
+                <td>
+                    @item.ShiftEnd.ToShortTimeString()
+                </td>
+                <td>
+                    <a class="btn btn-warning" asp-controller="ClinicWorkTimes" asp-route-id="@item.Id" asp-action="Edit">Edit</a>
+                    <a class="btn btn-danger" asp-controller="ClinicWorkTimes" asp-route-id="@item.Id" asp-action="Delete">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

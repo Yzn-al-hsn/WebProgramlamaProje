@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Edit";
+}
+
+@model WebProgramalamaProje.Models.CombinedModels.ClinicHospitalModel;
+
+
+<h1>Edit</h1>
+<form asp-action="Edit" asp-controller="Clinic" method="post">
+    <input asp-for="Clinic.Id" hidden/>
+    <div class="form-group">
+        <label asp-for="Clinic.Name">Clinic Name</label>
+        <input asp-for="Clinic.Name" class="form-control" placeholder="Clinic Name">
+        <span asp-validation-for="Clinic.Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Clinic.HospitalId">Hospital</label>
+        <select class="form-control" asp-for="Clinic.HospitalId">
+            @foreach (var hospital in Model.Hospitals)
+            {
+                <option value="@hospital.Id">@hospital.Name</option>
+            }
+        </select>
+        <span asp-validation-for="Clinic.HospitalId" class="text-danger"></span>
+    </div>
+
+
+
+    <div class="card">
+        <h5 class="card-header">Clinic Work Times</h5>
+        <div class="card-body">
+            <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Show Work Times
+                </a>
+                
+                <a asp-controller="ClinicWorkTimes" asp-action="Create" asp-route-clinicId="@Model.Clinic.Id" class="btn btn-primary">Add new work time</a>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    @await Html.PartialAsync("../ClinicWorkTimes/_ClinicWorkTimes.cshtml",Model.ClinicWorkTimes)
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <button type="submit" value="Save" class="btn btn-primary mt-3">Submit</button>
+    <a class="btn btn-secondary mt-3" asp-controller="Clinic" asp-action="Index">Back to list</a>
+
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

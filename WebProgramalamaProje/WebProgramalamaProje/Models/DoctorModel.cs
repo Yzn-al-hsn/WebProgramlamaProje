@@ -7,7 +7,7 @@ namespace WebProgramalamaProje.Models
     {
         [ForeignKey(nameof(ClinicModel))]
         public int ClinicId { get; set; }
-        public ClinicModel Clinic { get; set; }
+        public ClinicModel Clinic { get; set; } 
 
     }
 }

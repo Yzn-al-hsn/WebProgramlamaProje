@@ -1,6 +1,47 @@
-﻿@*
+﻿@model List<WebProgramalamaProje.Models.CombinedModels.ClinicHospitalFieldsModel>;
+
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
     Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Index";
 }
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Clinic</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Clinic
+            </th>
+            <th>
+                Hospital
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var clinic in Model)
+        {
+            <tr>
+                <td>
+                    @clinic.Name
+                </td>
+                <td>
+                    @clinic.HospitalName
+                </td>
+                <td>
+                    <a class="btn btn-warning" asp-controller="Clinic" asp-route-id ="@clinic.Id" asp-action="Edit">Edit</a>
+                    <a class="btn btn-danger" asp-controller="Clinic" asp-route-id="@clinic.Id" asp-action="Delete">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

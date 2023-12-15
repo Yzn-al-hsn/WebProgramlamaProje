@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+OkqXaIO2eSF9uN4aGECSIm6PProlT9Of2YIOPA66Hg=",
+  "Hash": "6b2WHHWMwJ0fRQcb01LKceKPOIC4CpjYmYh9Sj9X7f4=",
   "Source": "WebProgramalamaProje",
   "BasePath": "_content/WebProgramalamaProje",
   "Mode": "Default",
@@ -1460,6 +1460,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\demo.js"
+    },
+    {
+      "Identity": "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\Hastane.js",
+      "SourceId": "WebProgramalamaProje",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\",
+      "BasePath": "_content/WebProgramalamaProje",
+      "RelativePath": "js/Hastane.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Hastane.js"
     },
     {
       "Identity": "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\jquery.overlayScrollbars.min.js",

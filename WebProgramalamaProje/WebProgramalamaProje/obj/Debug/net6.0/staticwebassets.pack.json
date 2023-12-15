@@ -321,6 +321,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\Hastane.js",
+      "PackagePath": "staticwebassets\\js\\Hastane.js"
+    },
+    {
       "Id": "C:\\Users\\MHD OMAR\\source\\repos\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\OverlayScrollbars.min.js",
       "PackagePath": "staticwebassets\\js\\OverlayScrollbars.min.js"
     },
