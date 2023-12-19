@@ -9,85 +9,85 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebProgramalamaProje
 build_property.RootNamespace = WebProgramalamaProje
-build_property.ProjectDir = C:\Users\MHD OMAR\source\repos\WebProgramlamaProje\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\
+build_property.ProjectDir = C:\Users\Nitro\source\repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\MHD OMAR\source\repos\WebProgramlamaProje\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje
+build_property.MSBuildProjectDirectory = C:\Users\Nitro\source\repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Admin/Index.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Appointment/Index.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Appointment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Client/Index.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Client/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/ClinicWorkTimes/Index.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/ClinicWorkTimes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljV29ya1RpbWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Clinic/Index.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Clinic/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/DoctorWorkTimes/Index.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/DoctorWorkTimes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yV29ya1RpbWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Doctor/Index.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Doctor/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Home/Index.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Home/Privacy.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Hospital/Index.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Hospital/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Shared/Error.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Town/Create.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Town/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG93blxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Town/Edit.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Town/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG93blxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Town/Index.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Town/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG93blxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/_ViewImports.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/_ViewStart.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Shared/_Layout.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-012elmsiol
 
-[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Shared/_LayoutAdmin.cshtml]
+[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Shared/_LayoutAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-n38sryy8pn
