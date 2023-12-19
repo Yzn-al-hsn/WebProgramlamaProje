@@ -4,3 +4,38 @@
 @{
     Layout = "_LayoutAdmin";
 }
+@using WebProgramalamaProje.Models.Enums
+@model List<ClinicWorkTimesModel>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Day
+            </th>
+            <th>
+                Start Hour
+            </th>
+            <th>
+                End Hour
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Day
+                </td>
+                <td>
+                    @item.ShiftStart.ToShortTimeString()
+                </td>
+                <td>
+                    @item.ShiftEnd.ToShortTimeString()
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

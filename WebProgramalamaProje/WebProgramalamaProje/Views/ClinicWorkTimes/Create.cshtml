@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Create";
+}
+
+@model WebProgramalamaProje.Models.ClinicWorkTimesModel;
+@using WebProgramalamaProje.Models.Enums;
+@{
+    Layout = "_LayoutAdmin";
+    
+    ViewData["Title"] = "Edit";
+}
+
+    <h1>Create</h1>
+    <form asp-action="Create" method="post">
+        <input asp-for="ClinicId" hidden/>
+
+    <div class="form-group">
+        <label asp-for="Day"></label>
+        <select class="form-control" asp-for="Day">
+            @{
+                List<Days> daysList = Enum.GetValues(typeof(Days))
+                .Cast<Days>()
+                .ToList();
+                for(int i = 0; i < daysList.Count; i++)
+                {
+                    <option value="@i">@daysList[i]</option>
+                }
+            }
+        </select>
+        <span asp-validation-for="Day" class="text-danger"></span>
+    </div>
+
+    <div class="cs-form">
+        <label asp-for="ShiftStart">Shift Start</label>
+        <input type="time" asp-for="ShiftStart" class="form-control" value="10:05 AM" />
+    </div>  
+    <div class="cs-form">
+        <label asp-for="ShiftEnd">Shift End</label>
+        <input type="time" asp-for="ShiftEnd" class="form-control" value="10:05 AM" />
+    </div>
+
+    <button type="submit" value="Save" class="btn btn-primary mt-3">Submit</button>
+        <a class="btn btn-secondary mt-3" asp-controller="Clinic" asp-action="Index">
+            Back to list
+        </a>
+
+    </form>
+   
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

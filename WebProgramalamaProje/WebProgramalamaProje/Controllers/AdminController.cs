@@ -1,16 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using WebProgramalamaProje.Data;
 using WebProgramalamaProje.Models;
 
 namespace WebProgramalamaProje.Controllers
 {
     public class AdminController : Controller
     {
+        private readonly ApplicationDbContext _db;
+        public AdminController(ApplicationDbContext db) { 
+            _db = db;
+        }
         public async Task<IActionResult> Index()
         {
-            return View();
+            var model = await _db.Admins.ToListAsync();
+            return View(model);
         }
         [HttpPost]
-        public async Task<IActionResult> List() 
+        public async Task<IActionResult> List() // not working yet
         { 
             return View();
         }
