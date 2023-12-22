@@ -1,0 +1,58 @@
+﻿@model List<DoctorWorkTimesModel>
+@using WebProgramalamaProje.Services;
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Day
+            </th>
+            <th>
+                Start Hour
+            </th>
+            <th>
+                End Hour
+            </th>
+            <th>Edit & Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr id="item-@item.Id">
+                <td>
+                    @Utils.GetDayAsString(item.Day)
+                </td>
+                <td>
+                    @item.ShiftStart.ToShortTimeString()
+                </td>
+                <td>
+                    @item.ShiftEnd.ToShortTimeString()
+                </td>
+                <td>
+                    <a class="btn btn-warning" asp-controller="DoctorWorkTimes" asp-route-id="@item.Id" asp-action="Edit">Edit</a>
+                    <button class="delete-button btn btn-danger" data-id="@item.Id">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function () {
+        $('.delete-button').click(function () {
+            var id = $(this).data('id');
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("Delete", "DoctorWorkTimes")',
+                data: { id: id },
+                success: function (response) {
+                    if (response.success) {
+                        $('#item-' + id).remove(); // Remove the item row from the table
+                    } else {
+                        // Handle failure
+                    }
+                }
+            });
+        });
+    });
+</script>

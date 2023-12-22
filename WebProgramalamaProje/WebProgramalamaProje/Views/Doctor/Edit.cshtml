@@ -1,0 +1,124 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Edit";
+}
+
+@model WebProgramalamaProje.Models.CombinedModels.DoctorClinicModel;
+
+
+
+
+<form asp-action="Edit" asp-controller="Doctor" method="post">
+
+    <div class="content-header clearfix">
+        <h1 class="float-left">
+            Edit Doctor - @Model.Doctor.Id
+        </h1>
+        <div class="float-right">
+            <button type="submit" value="Save" class="btn btn-primary mt-3">Submit</button>
+            <a class="btn btn-secondary mt-3" asp-controller="Doctor" asp-action="Index">Back to list</a>
+        </div>
+    </div>
+
+    <input asp-for="Doctor.Id" hidden />
+    <div class="card">
+        <div class="card-body">
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Doctor.Name">Name</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input asp-for="Doctor.Name" class="form-control" placeholder="Doctor Name">
+                    </div>
+                </div>
+                <span asp-validation-for="Doctor.Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Doctor.SurName">SurName</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input asp-for="Doctor.SurName" class="form-control" placeholder="Doctor SurName">
+                    </div>
+                </div>
+                <span asp-validation-for="Doctor.SurName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Doctor.TCNumber">TC Number</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control" asp-for="Doctor.TCNumber" placeholder="Doctor TC Number">
+                    </div>
+                </div>
+                <span asp-validation-for="Doctor.TCNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Doctor.PhoneNumber"></label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" asp-for="Doctor.PhoneNumber" placeholder="Phone">
+                    </div>
+                </div>
+                <span asp-validation-for="Doctor.PhoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Doctor.ClinicId">Clinic</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control" asp-for="Doctor.ClinicId">
+                            @foreach (var clinic in Model.Clinics)
+                            {
+                                <option value="@clinic.Id">@clinic.Name</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <span asp-validation-for="Doctor.ClinicId" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<div class="card content-header ">
+    <div class="float-right ">
+        <h5 class="btn btn-info float-left">Doctor Work Times</h5>
+        <div class="float-right ">
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Show Work Times
+            </a>
+        </div>
+    </div>
+
+    <div class="card-body content-header">
+        <div class="collapse" id="collapseExample">
+            
+            <div class="card card-body">
+                @await Html.PartialAsync("../DoctorWorkTimes/_DoctorWorkTimes.cshtml",Model.DoctorWorkTimes)
+            </div>
+            <p>
+                <a asp-controller="DoctorWorkTimes" asp-action="Create" asp-route-doctorId="@Model.Doctor.Id" class="btn btn-primary">Add new work time</a>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

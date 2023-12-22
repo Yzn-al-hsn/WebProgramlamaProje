@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/vcfPRJg1iR/VLg5Uq0Mcnt26NelqDjUYckWF9+4ZPw=",
+  "Hash": "+A4ImB9uMzDQGik6MRKNHwv1jVrjd1mmsyRfW6rcC38=",
   "Source": "WebProgramalamaProje",
   "BasePath": "_content/WebProgramalamaProje",
   "Mode": "Default",
@@ -1460,6 +1460,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\demo.js"
+    },
+    {
+      "Identity": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\Hastane.js",
+      "SourceId": "WebProgramalamaProje",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\",
+      "BasePath": "_content/WebProgramalamaProje",
+      "RelativePath": "js/Hastane.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Hastane.js"
     },
     {
       "Identity": "C:\\Users\\Nitro\\source\\repos\\WebProgramlamaProje\\WebProgramalamaProje\\WebProgramalamaProje\\wwwroot\\js\\jquery.overlayScrollbars.min.js",

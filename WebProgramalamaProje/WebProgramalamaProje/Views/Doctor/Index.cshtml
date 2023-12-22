@@ -1,6 +1,90 @@
-﻿@*
+﻿@model List<WebProgramalamaProje.Models.CombinedModels.DoctorClinicFieldsModel>;
+
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
     Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Index";
 }
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Doctor</a>
+</p>
+<div class="card">
+    <div class="card-body">
+        <table class="table" id="item-table">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        SurName
+                    </th>
+                    <th>
+                        TC Number
+                    </th>
+                    <th>
+                        Phone Number
+                    </th>
+                    <th>
+                        Clinic Name
+                    </th>
+                    <th>Edit & Delete</th>
+                </tr>
+            </thead>
+            <tbody id="item-container">
+                @foreach (var doctor in Model)
+                {
+                    <tr id="item-@doctor.Id">
+
+                        <td>
+                            @doctor.Name
+                        </td>
+                        <td>
+                            @doctor.SurName
+                        </td>
+                        <td>
+                            @doctor.TCNumber
+                        </td>
+                        <td>
+                            @doctor.PhoneNumber
+                        </td>
+                        <td>
+                            @doctor.ClinicName
+                        </td>
+                        <td>
+                            <a class="btn btn-warning" asp-controller="Doctor" asp-route-id="@doctor.Id" asp-action="Edit">Edit</a>
+
+                            <!-- Item Display -->
+                            <button class="delete-button btn btn-danger" data-id="@doctor.Id">Delete</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.delete-button').click(function () {
+            var id = $(this).data('id');
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("Delete", "Doctor")',
+                data: { id: id },
+                success: function (response) {
+                    if (response.success) {
+                        $('#item-' + id).remove(); // Remove the item row from the table
+                    } else {
+                        // Handle failure
+                    }
+                }
+            });
+        });
+    });
+</script>
+
