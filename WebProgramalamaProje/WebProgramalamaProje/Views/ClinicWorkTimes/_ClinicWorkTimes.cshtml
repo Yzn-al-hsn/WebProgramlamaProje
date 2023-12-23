@@ -12,13 +12,13 @@
             <th>
                 End Hour
             </th>
-            <th></th>
+            <th>Edit & Delete</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
+            <tr id="item-@item.Id">
                 <td>
                     @Utils.GetDayAsString(item.Day)
                 </td>
@@ -30,9 +30,29 @@
                 </td>
                 <td>
                     <a class="btn btn-warning" asp-controller="ClinicWorkTimes" asp-route-id="@item.Id" asp-action="Edit">Edit</a>
-                    <a class="btn btn-danger" asp-controller="ClinicWorkTimes" asp-route-id="@item.Id" asp-action="Delete">Delete</a>
+                    <button class="delete-button btn btn-danger" data-id="@item.Id">Delete</button>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+<script>
+    $(document).ready(function () {
+        $('.delete-button').click(function () {
+            var id = $(this).data('id');
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("Delete", "ClinicWorkTimes")',
+                data: { id: id },
+                success: function (response) {
+                    if (response.success) {
+                        $('#item-' + id).remove(); // Remove the item row from the table
+                    } else {
+                        // Handle failure
+                    }
+                }
+            });
+        });
+    });
+</script>

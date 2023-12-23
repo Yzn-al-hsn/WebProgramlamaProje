@@ -36,10 +36,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljV29ya1RpbWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/ClinicWorkTimes/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljV29ya1RpbWVzXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/ClinicWorkTimes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljV29ya1RpbWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,10 +50,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Clinic/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Clinic/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Clinic/Edit.cshtml]
@@ -106,10 +98,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Hospital/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Hospital/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nitro/source/repos/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Hospital/Edit.cshtml]

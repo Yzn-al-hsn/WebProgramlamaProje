@@ -6,51 +6,80 @@
 @model WebProgramalamaProje.Models.CombinedModels.ClinicHospitalModel;
 
 
-<h1>Edit</h1>
 <form asp-action="Edit" asp-controller="Clinic" method="post">
+
+    <div class="content-header clearfix">
+        <h1 class="float-left">
+            Edit Clinic - @Model.Clinic.Id
+        </h1>
+        <div class="float-right">
+            <button type="submit" value="Save" class="btn btn-primary mt-3">Submit</button>
+            <a class="btn btn-secondary mt-3" asp-controller="Clinic" asp-action="Index">Back to list</a>
+        </div>
+    </div>
+
     <input asp-for="Clinic.Id" hidden/>
-    <div class="form-group">
-        <label asp-for="Clinic.Name">Clinic Name</label>
-        <input asp-for="Clinic.Name" class="form-control" placeholder="Clinic Name">
-        <span asp-validation-for="Clinic.Name" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Clinic.HospitalId">Hospital</label>
-        <select class="form-control" asp-for="Clinic.HospitalId">
-            @foreach (var hospital in Model.Hospitals)
-            {
-                <option value="@hospital.Id">@hospital.Name</option>
-            }
-        </select>
-        <span asp-validation-for="Clinic.HospitalId" class="text-danger"></span>
-    </div>
-
-
 
     <div class="card">
-        <h5 class="card-header">Clinic Work Times</h5>
         <div class="card-body">
-            <p>
-                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Show Work Times
-                </a>
-                
-                <a asp-controller="ClinicWorkTimes" asp-action="Create" asp-route-clinicId="@Model.Clinic.Id" class="btn btn-primary">Add new work time</a>
-            </p>
-            <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    @await Html.PartialAsync("../ClinicWorkTimes/_ClinicWorkTimes.cshtml",Model.ClinicWorkTimes)
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Clinic.Name">Clinic Name</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input asp-for="Clinic.Name" class="form-control" placeholder="Clinic Name">
+                    </div>
                 </div>
+                <span asp-validation-for="Clinic.Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Clinic.HospitalId">Hospital</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control" asp-for="Clinic.HospitalId">
+                            @foreach (var hospital in Model.Hospitals)
+                            {
+                                <option value="@hospital.Id">@hospital.Name</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <span asp-validation-for="Clinic.HospitalId" class="text-danger"></span>
             </div>
 
         </div>
     </div>
 
-    <button type="submit" value="Save" class="btn btn-primary mt-3">Submit</button>
-    <a class="btn btn-secondary mt-3" asp-controller="Clinic" asp-action="Index">Back to list</a>
-
 </form>
+
+<div class="card content-header ">
+    <div class="float-right ">
+        <h5 class="btn btn-info float-left">Clinic Work Times</h5>
+        <div class="float-right ">
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Show Work Times
+            </a>
+        </div>
+    </div>
+
+    <div class="card-body content-header">
+        <div class="collapse" id="collapseExample">
+
+            <div class="card card-body">
+                @await Html.PartialAsync("../ClinicWorkTimes/_ClinicWorkTimes.cshtml",Model.ClinicWorkTimes)
+            </div>
+            <p>
+                <a asp-controller="ClinicWorkTimes" asp-action="Create" asp-route-clinicId="@Model.Clinic.Id" class="btn btn-primary">Add new work time</a>
+            </p>
+        </div>
+
+    </div>
+</div>
 
 @section Scripts {
     @{

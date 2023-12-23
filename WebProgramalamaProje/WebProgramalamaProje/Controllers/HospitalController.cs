@@ -89,26 +89,20 @@ namespace WebProgramalamaProje.Controllers
             
         }
 
+
+        [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
             var model = await _db.Hospital.FindAsync(id);
-            if(model != null)
-                return View(model);
-
-            return RedirectToAction("Index");
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Delete(HospitalModel model)
-        {
-            if(model != null)
+            if (model != null)
             {
                 _db.Hospital.Remove(model);
                 await _db.SaveChangesAsync();
 
+                return Json(new { success = true, deletedId = id });
             }
-            return RedirectToAction("Index");
-            
+            return Json(new { error = true });
         }
+        
     }
 }

@@ -5,44 +5,90 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
 <form asp-action="Edit" method="post">
-    <div class="form-group">
-        <input type="hidden" asp-for="@Model.Hospital.Id" />
-        <label asp-for="Hospital.Name">Hospital Name</label>
-        <input asp-for="Hospital.Name" class="form-control" placeholder="@Model.Hospital.Name">
-        <span asp-validation-for="Hospital.Name" class="text-danger"></span>
+
+    <div class="content-header clearfix">
+        <h1 class="float-left">
+            Edit Hospital - @Model.Hospital.Id
+        </h1>
+        <div class="float-right">
+            <button type="submit" value="Save" class="btn btn-primary mt-3">Submit</button>
+            <a class="btn btn-secondary mt-3" asp-controller="Hospital" asp-action="Index">Back to list</a>
+        </div>
     </div>
 
-    <div class="form-group">
-        <label asp-for="Hospital.TownId">Town </label>
-        <select class="form-control" asp-for="Hospital.TownId">
-            @foreach (var town in Model.Towns)
-            {
-                <option value="@town.Id">@town.Name</option>
-            }
-        </select>
-        <span asp-validation-for="Hospital.TownId" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Hospital.Email"></label>
-        <input type="email" class="form-control" asp-for="Hospital.Email" placeholder="Email">
-        <span asp-validation-for="Hospital.Email" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Hospital.PhoneNumber"></label>
-        <input type="text" class="form-control" asp-for="Hospital.PhoneNumber" placeholder="Phone">
-        <span asp-validation-for="Hospital.PhoneNumber" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Hospital.Address"></label>
-        <input type="text" class="form-control" asp-for="Hospital.Address" placeholder="Address">
-        <span asp-validation-for="Hospital.Address" class="text-danger"></span>
-    </div>
-    <button type="submit" value="Save" class="btn btn-primary mt-3">Save</button>
-    <button type="submit" asp-controller="Hospital" asp-action="Index" class="btn btn-secondary mt-3">Back to list</button>
+    <input type="hidden" asp-for="@Model.Hospital.Id" />
 
+    <div class="card">
+        <div class="card-body">
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Hospital.Name">Hospital Name</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input asp-for="Hospital.Name" class="form-control" placeholder="Hospital Name">
+                    </div>
+                </div>
+                <span asp-validation-for="Hospital.Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Hospital.TownId">Town</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control" asp-for="Hospital.TownId">
+                            @foreach (var town in Model.Towns)
+                            {
+                                <option value="@town.Id">@town.Name</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <span asp-validation-for="Hospital.TownId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Hospital.Email">Hospital Email</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input asp-for="Hospital.Email" class="form-control" placeholder="Hospital Email">
+                    </div>
+                </div>
+                <span asp-validation-for="Hospital.Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Hospital.PhoneNumber">Hospital Phone Number</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input asp-for="Hospital.PhoneNumber" class="form-control" placeholder="Hospital Phone Number">
+                    </div>
+                </div>
+                <span asp-validation-for="Hospital.PhoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Hospital.Address">Hospital Address</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input asp-for="Hospital.Address" class="form-control" placeholder="Hospital Address">
+                    </div>
+                </div>
+                <span asp-validation-for="Hospital.Address" class="text-danger"></span>
+            </div>
+
+        </div>
+    </div>
 </form>
 
 

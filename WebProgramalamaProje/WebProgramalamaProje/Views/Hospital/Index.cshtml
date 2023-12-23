@@ -1,5 +1,4 @@
-﻿
-@*
+﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -7,42 +6,69 @@
 }
 
 @model List<WebProgramalamaProje.Models.CombinedModels.HospitalTownFieldsModel>
-<p class="pt-3">
-    <a asp-controller="Hospital" asp-action="Create" class="btn btn-primary">Create New</a>
+
+<h1>Hospitals List</h1>
+
+<p>
+    <a asp-controller="Hospital" asp-action="Create" class="btn btn-primary">Create New Hospital</a>
 </p>
-<table class="table">
+<div class="card">
+    <div class="card-body">
+        <table class="table">
 
-    <thead>
-        <tr>
-            
-            <th scope="col">Hospital Name</th>
-            <th scope="col">Hospital Town</th>
-            <th scope="col">Hospital Address</th>
-            <th scope="col">Hospital Email</th>
-            <th scope="col">Hospital PhoneNumber</th>
+            <thead>
+                <tr>
 
-            <th></th>
-            
+                    <th scope="col">Hospital Name</th>
+                    <th scope="col">Hospital Town</th>
+                    <th scope="col">Hospital Address</th>
+                    <th scope="col">Hospital Email</th>
+                    <th scope="col">Hospital PhoneNumber</th>
 
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var hospital in Model)
-        {
-            <tr>
-                <td>@hospital.HospitalName</td>
-                <td>@hospital.HospitalTown</td>
-                <td>@hospital.HospitalAddress</td>
-                <td>@hospital.HospitalEmail</td>
-                <td>@hospital.HospitalPhoneNumber</td>
+                    <th>Edit & Delete</th>
 
-                <td>
 
-                    <a asp-action="Edit" asp-controller="Hospital" asp-route-hospitalId="@hospital.Id" class="btn btn-warning">Edit</a>
-                    <a asp-action="Delete" type="submit" asp-controller="Hospital" asp-route-id="@hospital.Id" class="btn btn-danger">Delete</a>
-                </td>
-            </tr>
-        }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var hospital in Model)
+                {
+                    <tr id="item-@hospital.Id">
+                        <td>@hospital.HospitalName</td>
+                        <td>@hospital.HospitalTown</td>
+                        <td>@hospital.HospitalAddress</td>
+                        <td>@hospital.HospitalEmail</td>
+                        <td>@hospital.HospitalPhoneNumber</td>
 
-    </tbody>
-</table>
+                        <td>
+
+                            <a asp-action="Edit" asp-controller="Hospital" asp-route-hospitalId="@hospital.Id" class="btn btn-warning">Edit</a>
+                            <button class="delete-button btn btn-danger" data-id="@hospital.Id">Delete</button>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.delete-button').click(function () {
+            var id = $(this).data('id');
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("Delete", "Hospital")',
+                data: { id: id },
+                success: function (response) {
+                    if (response.success) {
+                        $('#item-' + id).remove(); // Remove the item row from the table
+                    } else {
+                        // Handle failure
+                    }
+                }
+            });
+        });
+    });
+</script>

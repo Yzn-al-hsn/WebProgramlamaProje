@@ -95,27 +95,20 @@ namespace WebProgramalamaProje.Controllers
             }
             return View();
         }
+
+        [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
             var model = await _db.ClinicWorkTimes.FindAsync(id);
             if (model != null)
             {
-
-                return View(model);
-            }
-            return RedirectToAction("Edit", "Clinic");
-        }
-        [HttpPost]
-        public async Task<IActionResult> Delete(ClinicWorkTimesModel model)
-        {
-            if(model != null)
-            {
-                var clinicId = model.ClinicId;
                 _db.ClinicWorkTimes.Remove(model);
                 await _db.SaveChangesAsync();
-                return RedirectToAction("Edit", "Clinic", new { id = clinicId });
+
+                return Json(new { success = true, deletedId = id });
             }
-            return View("Index", "Clinic");
+            return Json(new { error = true });
         }
+
     }
 }
