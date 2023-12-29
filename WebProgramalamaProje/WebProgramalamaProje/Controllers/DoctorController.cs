@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebProgramalamaProje.Data;
 using WebProgramalamaProje.Models;
@@ -6,6 +7,8 @@ using WebProgramalamaProje.Models.CombinedModels;
 
 namespace WebProgramalamaProje.Controllers
 {
+    [Authorize(Roles = "admin")]
+
     public class DoctorController : Controller
     {
         private readonly ApplicationDbContext _db;

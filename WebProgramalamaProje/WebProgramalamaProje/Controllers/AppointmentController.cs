@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WebProgramalamaProje.Models;
 
 namespace WebProgramalamaProje.Controllers
 {
+    [Authorize(Roles = "admin")]
+
     public class AppointmentController : Controller
     {
         public async Task<IActionResult> Index()

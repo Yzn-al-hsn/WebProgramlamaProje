@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebProgramalamaProje.Data;
 using WebProgramalamaProje.Models;
 
 namespace WebProgramalamaProje.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class TownController : Controller
     {
         private readonly ApplicationDbContext _db;
@@ -13,7 +15,7 @@ namespace WebProgramalamaProje.Controllers
         {
             _db = db;
         }
-
+        
         public async Task<IActionResult> Index()
         {
             var model = await _db.Towns.ToListAsync();
@@ -21,17 +23,19 @@ namespace WebProgramalamaProje.Controllers
         }
 
         [HttpPost]
+       
         public async Task<IActionResult> List()//not using now
         {
             return View();
         }
-
+        
         public async Task<IActionResult> Create()
         {
             return View();
         }
 
         [HttpPost]
+        
         public async Task<IActionResult> Create(TownModel model)
         {
             if(ModelState.IsValid)
@@ -44,7 +48,7 @@ namespace WebProgramalamaProje.Controllers
 
             return View();
         }
-
+        
         public async Task<IActionResult> Edit(int id)
         {
             var model=await _db.Towns.FindAsync(id);
@@ -56,6 +60,7 @@ namespace WebProgramalamaProje.Controllers
         }
 
         [HttpPost]
+       
         public async Task<IActionResult> Edit(TownModel model)
         {
             if(ModelState.IsValid)
@@ -68,6 +73,7 @@ namespace WebProgramalamaProje.Controllers
 
             return View(model);
         }
+        
 
         [HttpPost]
         public async Task<IActionResult> Delete(int id)

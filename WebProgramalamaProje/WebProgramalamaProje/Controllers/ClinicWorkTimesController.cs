@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebProgramalamaProje.Data;
 using WebProgramalamaProje.Models;
 
 namespace WebProgramalamaProje.Controllers
 {
+    [Authorize(Roles = "admin")]
+
     public class ClinicWorkTimesController : Controller
     {
         private readonly ApplicationDbContext _db;

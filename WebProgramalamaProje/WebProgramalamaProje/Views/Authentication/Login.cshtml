@@ -1,0 +1,30 @@
+﻿@model  WebProgramalamaProje.Models.DTO.LoginModel
+
+@{
+    Layout = "_Layout";
+}
+
+<form asp-action="Login" method="post" >
+    <div class="card-body">
+        <div class="form-group">
+            <label asp-for="Email">Email address</label>
+            <input type="email" asp-for="Email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label asp-for="Password">Password</label>
+            <input type="password" asp-for="Password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        
+    </div>
+    <!-- /.card-body -->
+    <div class="card-footer" style="background-color: #fffeff;">
+        <button type="submit" class="btn btn-primary">Sign In</button>
+        <a class="btn btn-primary" asp-controller="Authentication" asp-action="Registration">Sign Up</a>
+    </div>
+
+    @if (TempData["msg"] != null)
+    {
+        <div class="msg">@TempData["msg"]</div>
+    }
+   
+</form>
