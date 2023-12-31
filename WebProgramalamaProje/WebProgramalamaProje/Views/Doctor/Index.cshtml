@@ -11,7 +11,7 @@
 <h1>Doctors List</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-primary">Create New Doctor</a>
+    <a asp-action="Create" class="btn btn-primary">@_localization.GetKey("Create")</a>
 </p>
 <div class="card">
     <div class="card-body">
@@ -19,21 +19,21 @@
             <thead>
                 <tr>
                     <th>
-                        Name
+                        @_localization.GetKey("Name")
                     </th>
                     <th>
-                        SurName
+                        @_localization.GetKey("Surname")
                     </th>
                     <th>
-                        TC Number
+                        TC
                     </th>
                     <th>
-                        Phone Number
+                        @_localization.GetKey("PhoneNumber")
                     </th>
                     <th>
-                        Clinic Name
+                        @_localization.GetKey("Clinic") @_localization.GetKey("Name")
                     </th>
-                    <th>Edit & Delete</th>
+                    <th>@_localization.GetKey("Edit") & @_localization.GetKey("Delete")</th>
                 </tr>
             </thead>
             <tbody id="item-container">
@@ -57,10 +57,10 @@
                             @doctor.ClinicName
                         </td>
                         <td>
-                            <a class="btn btn-warning" asp-controller="Doctor" asp-route-id="@doctor.Id" asp-action="Edit">Edit</a>
+                            <a class="btn btn-warning" asp-controller="Doctor" asp-route-id="@doctor.Id" asp-action="Edit">@_localization.GetKey("Edit")</a>
 
                             <!-- Item Display -->
-                            <button class="delete-button btn btn-danger" data-id="@doctor.Id">Delete</button>
+                            <button class="delete-button btn btn-danger" data-id="@doctor.Id">@_localization.GetKey("Delete")</button>
                         </td>
                     </tr>
                 }

@@ -16,6 +16,14 @@
         },
         "runtime": {
           "WebProgramalamaProje.dll": {}
+        },
+        "resources": {
+          "en-US/WebProgramalamaProje.resources.dll": {
+            "locale": "en-US"
+          },
+          "tr-TR/WebProgramalamaProje.resources.dll": {
+            "locale": "tr-TR"
+          }
         }
       },
       "Humanizer/2.14.1": {

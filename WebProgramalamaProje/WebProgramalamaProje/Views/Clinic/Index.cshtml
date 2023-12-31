@@ -8,10 +8,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Clinics List</h1>
+<h1>@_localization.GetKey("ClinicIndexTitle")</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-primary">Create New Clinic</a>
+    <a asp-action="Create" class="btn btn-primary">@_localization.GetKey("Create")</a>
 </p>
 <div class="card">
     <div class="card-body">
@@ -19,12 +19,12 @@
             <thead>
                 <tr>
                     <th>
-                        Clinic
+                        @_localization.GetKey("Clinic")
                     </th>
                     <th>
-                        Hospital
+                        @_localization.GetKey("Hospital")
                     </th>
-                    <th>Edit & Delete</th>
+                    <th>@_localization.GetKey("Edit") & @_localization.GetKey("Delete")</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,8 +38,8 @@
                             @clinic.HospitalName
                         </td>
                         <td>
-                            <a class="btn btn-warning" asp-controller="Clinic" asp-route-id="@clinic.Id" asp-action="Edit">Edit</a>
-                            <button class="delete-button btn btn-danger" data-id="@clinic.Id">Delete</button>
+                            <a class="btn btn-warning" asp-controller="Clinic" asp-route-id="@clinic.Id" asp-action="Edit">@_localization.GetKey("Edit")</a>
+                            <button class="delete-button btn btn-danger" data-id="@clinic.Id">@_localization.GetKey("Delete")</button>
                         </td>
                     </tr>
                 }

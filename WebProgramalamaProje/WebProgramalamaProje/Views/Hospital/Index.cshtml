@@ -7,10 +7,10 @@
 
 @model List<WebProgramalamaProje.Models.CombinedModels.HospitalTownFieldsModel>
 
-<h1>Hospitals List</h1>
+<h1>@_localization.GetKey("HospitalIndexTitle")</h1>
 
 <p>
-    <a asp-controller="Hospital" asp-action="Create" class="btn btn-primary">Create New Hospital</a>
+    <a asp-controller="Hospital" asp-action="Create" class="btn btn-primary">@_localization.GetKey("Create")</a>
 </p>
 <div class="card">
     <div class="card-body">
@@ -19,13 +19,13 @@
             <thead>
                 <tr>
 
-                    <th scope="col">Hospital Name</th>
-                    <th scope="col">Hospital Town</th>
-                    <th scope="col">Hospital Address</th>
-                    <th scope="col">Hospital Email</th>
-                    <th scope="col">Hospital PhoneNumber</th>
+                    <th scope="col">@_localization.GetKey("Name")</th>
+                    <th scope="col">@_localization.GetKey("Town")</th>
+                    <th scope="col">Addres</th>
+                    <th scope="col">@_localization.GetKey("FormMailAdress")</th>
+                    <th scope="col">@_localization.GetKey("PhoneNumber")</th>
 
-                    <th>Edit & Delete</th>
+                    <th>@_localization.GetKey("Edit") & @_localization.GetKey("Delete")</th>
 
 
                 </tr>
@@ -42,8 +42,8 @@
 
                         <td>
 
-                            <a asp-action="Edit" asp-controller="Hospital" asp-route-hospitalId="@hospital.Id" class="btn btn-warning">Edit</a>
-                            <button class="delete-button btn btn-danger" data-id="@hospital.Id">Delete</button>
+                            <a asp-action="Edit" asp-controller="Hospital" asp-route-hospitalId="@hospital.Id" class="btn btn-warning">@_localization.GetKey("Edit")</a>
+                            <button class="delete-button btn btn-danger" data-id="@hospital.Id">@_localization.GetKey("Delete")</button>
                         </td>
                     </tr>
                 }

@@ -9,11 +9,11 @@
 <form asp-action="Create">
     <div class="content-header clearfix">
         <h1 class="float-left">
-            Create A New Town
+            @_localization.GetKey("Create")
         </h1>
         <div class="float-right">
-            <button type="submit" value="Save" class="btn btn-primary mt-3">Submit</button>
-            <a class="btn btn-secondary mt-3" asp-controller="Town" asp-action="Index">Back to list</a>
+            <button type="submit" value="Save" class="btn btn-primary mt-3">@_localization.GetKey("Submit")</button>
+            <a class="btn btn-secondary mt-3" asp-controller="Town" asp-action="Index">@_localization.GetKey("BackToList")</a>
         </div>
     </div>
 
@@ -23,10 +23,10 @@
             <div class="form-group col-md-12">
                 <div class="form-group row">
                     <div class="col-md-4">
-                        <label asp-for="Name">Name</label>
+                        <label asp-for="Name">@_localization.GetKey("Name")</label>
                     </div>
                     <div class="col-md-8">
-                        <input asp-for="Name" class="form-control" placeholder="Town Name">
+                        <input asp-for="Name" class="form-control" placeholder="@_localization.GetKey("Name")">
                     </div>
                 </div>
                 <span asp-validation-for="Name" class="text-danger"></span>
@@ -35,10 +35,10 @@
             <div class="form-group col-md-12">
                 <div class="form-group row">
                     <div class="col-md-4">
-                        <label asp-for="City">City</label>
+                        <label asp-for="City">@_localization.GetKey("City")</label>
                     </div>
                     <div class="col-md-8">
-                        <input asp-for="City" class="form-control" placeholder="City">
+                        <input asp-for="City" class="form-control" placeholder="@_localization.GetKey("City")">
                     </div>
                 </div>
                 <span asp-validation-for="City" class="text-danger"></span>
@@ -47,10 +47,10 @@
             <div class="form-group col-md-12">
                 <div class="form-group row">
                     <div class="col-md-4">
-                        <label asp-for="Country">Country</label>
+                        <label asp-for="Country">@_localization.GetKey("Country")</label>
                     </div>
                     <div class="col-md-8">
-                        <input asp-for="Country" class="form-control" placeholder="Country">
+                        <input asp-for="Country" class="form-control" placeholder="@_localization.GetKey("Country")">
                     </div>
                 </div>
                 <span asp-validation-for="Country" class="text-danger"></span>

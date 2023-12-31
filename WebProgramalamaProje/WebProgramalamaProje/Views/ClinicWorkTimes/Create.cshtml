@@ -10,11 +10,11 @@
 
     <div class="content-header clearfix">
         <h1 class="float-left">
-            Create Clinic Work Time - Clinic Id @Model.ClinicId
+            @_localization.GetKey("Create") @_localization.GetKey("ClinicWorkTimes") - @_localization.GetKey("Clinic") Id @Model.ClinicId
         </h1>
         <div class="float-right">
-            <button type="submit" value="Save" class="btn btn-primary mt-3">Submit</button>
-            <a class="btn btn-secondary mt-3" asp-controller="Clinic" asp-action="Edit" asp-route-id="@Model.ClinicId">Back to list</a>
+            <button type="submit" value="Save" class="btn btn-primary mt-3">@_localization.GetKey("Submit")</button>
+            <a class="btn btn-secondary mt-3" asp-controller="Clinic" asp-action="Edit" asp-route-id="@Model.ClinicId">@_localization.GetKey("BackToList")</a>
         </div>
     </div>
 
@@ -23,7 +23,7 @@
             <div class="form-group col-md-12">
                 <div class="form-group row">
                     <div class="col-md-4">
-                        <label asp-for="Day"></label>
+                        <label asp-for="Day">@_localization.GetKey("Day")</label>
                     </div>
                     <div class="col-md-8">
                         <select class="form-control" asp-for="Day">
@@ -45,7 +45,7 @@
             <div class="form-group col-md-12">
                 <div class="form-group row">
                     <div class="col-md-4">
-                        <label asp-for="ShiftStart">Shift Start</label>
+                        <label asp-for="ShiftStart">@_localization.GetKey("ShiftStart")</label>
                     </div>
                     <div class="col-md-8">
                         <input type="time" asp-for="ShiftStart" class="form-control" value="10:05 AM" />
@@ -56,7 +56,7 @@
             <div class="form-group col-md-12">
                 <div class="form-group row">
                     <div class="col-md-4">
-                        <label asp-for="ShiftEnd">Shift End</label>
+                        <label asp-for="ShiftEnd">@_localization.GetKey("ShiftEnd")</label>
                     </div>
                     <div class="col-md-8">
                         <input type="time" asp-for="ShiftEnd" class="form-control" value="10:05 AM" />

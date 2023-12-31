@@ -7,12 +7,12 @@
 <form asp-action="Login" method="post" >
     <div class="card-body">
         <div class="form-group">
-            <label asp-for="Email">Email address</label>
-            <input type="email" asp-for="Email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            <label asp-for="Email">@_localization.GetKey("FormMailAdress").Value</label>
+            <input type="email" asp-for="Email" class="form-control" id="exampleInputEmail1" placeholder="@_localization.GetKey("FormMailAdress").Value">
         </div>
         <div class="form-group">
-            <label asp-for="Password">Password</label>
-            <input type="password" asp-for="Password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label asp-for="Password">@_localization.GetKey("FormPassword").Value</label>
+            <input type="password" asp-for="Password" class="form-control" id="exampleInputPassword1" placeholder="@_localization.GetKey("FormPassword").Value">
         </div>
         
     </div>

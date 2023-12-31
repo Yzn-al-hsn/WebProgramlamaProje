@@ -9,11 +9,11 @@
 
     <div class="content-header clearfix">
         <h1 class="float-left">
-            Edit Hospital - @Model.Hospital.Id
+            @_localization.GetKey("Edit") - @Model.Hospital.Id
         </h1>
         <div class="float-right">
-            <button type="submit" value="Save" class="btn btn-primary mt-3">Submit</button>
-            <a class="btn btn-secondary mt-3" asp-controller="Hospital" asp-action="Index">Back to list</a>
+            <button type="submit" value="Save" class="btn btn-primary mt-3">@_localization.GetKey("Submit")</button>
+            <a class="btn btn-secondary mt-3" asp-controller="Hospital" asp-action="Index">@_localization.GetKey("BackToList")</a>
         </div>
     </div>
 
@@ -25,10 +25,10 @@
             <div class="form-group col-md-12">
                 <div class="form-group row">
                     <div class="col-md-4">
-                        <label asp-for="Hospital.Name">Hospital Name</label>
+                        <label asp-for="Hospital.Name">@_localization.GetKey("Hospital") @_localization.GetKey("Name")</label>
                     </div>
                     <div class="col-md-8">
-                        <input asp-for="Hospital.Name" class="form-control" placeholder="Hospital Name">
+                        <input asp-for="Hospital.Name" class="form-control" placeholder="@_localization.GetKey("Hospital") @_localization.GetKey("Name")">
                     </div>
                 </div>
                 <span asp-validation-for="Hospital.Name" class="text-danger"></span>
@@ -37,7 +37,7 @@
             <div class="form-group col-md-12">
                 <div class="form-group row">
                     <div class="col-md-4">
-                        <label asp-for="Hospital.TownId">Town</label>
+                        <label asp-for="Hospital.TownId">@_localization.GetKey("Hospital") @_localization.GetKey("Town")</label>
                     </div>
                     <div class="col-md-8">
                         <select class="form-control" asp-for="Hospital.TownId">
@@ -54,10 +54,10 @@
             <div class="form-group col-md-12">
                 <div class="form-group row">
                     <div class="col-md-4">
-                        <label asp-for="Hospital.Email">Hospital Email</label>
+                        <label asp-for="Hospital.Email">@_localization.GetKey("Hospital") @_localization.GetKey("FormMailAdress")</label>
                     </div>
                     <div class="col-md-8">
-                        <input asp-for="Hospital.Email" class="form-control" placeholder="Hospital Email">
+                        <input asp-for="Hospital.Email" class="form-control" placeholder="@_localization.GetKey("Hospital") @_localization.GetKey("FormMailAdress")">
                     </div>
                 </div>
                 <span asp-validation-for="Hospital.Email" class="text-danger"></span>
@@ -66,10 +66,10 @@
             <div class="form-group col-md-12">
                 <div class="form-group row">
                     <div class="col-md-4">
-                        <label asp-for="Hospital.PhoneNumber">Hospital Phone Number</label>
+                        <label asp-for="Hospital.PhoneNumber">@_localization.GetKey("Hospital") @_localization.GetKey("PhoneNumber")</label>
                     </div>
                     <div class="col-md-8">
-                        <input asp-for="Hospital.PhoneNumber" class="form-control" placeholder="Hospital Phone Number">
+                        <input asp-for="Hospital.PhoneNumber" class="form-control" placeholder="@_localization.GetKey("Hospital") @_localization.GetKey("PhoneNumber")">
                     </div>
                 </div>
                 <span asp-validation-for="Hospital.PhoneNumber" class="text-danger"></span>
@@ -78,10 +78,10 @@
             <div class="form-group col-md-12">
                 <div class="form-group row">
                     <div class="col-md-4">
-                        <label asp-for="Hospital.Address">Hospital Address</label>
+                        <label asp-for="Hospital.Address">Address</label>
                     </div>
                     <div class="col-md-8">
-                        <input asp-for="Hospital.Address" class="form-control" placeholder="Hospital Address">
+                        <input asp-for="Hospital.Address" class="form-control" placeholder="@_localization.GetKey("Hospital") Address">
                     </div>
                 </div>
                 <span asp-validation-for="Hospital.Address" class="text-danger"></span>

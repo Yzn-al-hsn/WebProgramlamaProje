@@ -4,15 +4,15 @@
     <thead>
         <tr>
             <th>
-                Day
+                @_localization.GetKey("Day")
             </th>
             <th>
-                Start Hour
+                @_localization.GetKey("ShiftStart")
             </th>
             <th>
-                End Hour
+                @_localization.GetKey("ShiftEnd")
             </th>
-            <th>Edit & Delete</th>
+            <th>@_localization.GetKey("Edit") & @_localization.GetKey("Delete")</th>
         </tr>
     </thead>
     <tbody>
@@ -29,8 +29,8 @@
                     @item.ShiftEnd.ToShortTimeString()
                 </td>
                 <td>
-                    <a class="btn btn-warning" asp-controller="DoctorWorkTimes" asp-route-id="@item.Id" asp-action="Edit">Edit</a>
-                    <button class="delete-button btn btn-danger" data-id="@item.Id">Delete</button>
+                    <a class="btn btn-warning" asp-controller="DoctorWorkTimes" asp-route-id="@item.Id" asp-action="Edit">@_localization.GetKey("Edit")</a>
+                    <button class="delete-button btn btn-danger" data-id="@item.Id">@_localization.GetKey("Delete")</button>
                 </td>
             </tr>
         }
