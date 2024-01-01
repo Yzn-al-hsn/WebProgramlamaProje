@@ -28,13 +28,23 @@ namespace WebProgramalamaProje.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult ChangeLanguageAdmin(string culture)
+        {
+            Response.Cookies.Append(CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)), new CookieOptions()
+                {
+                    Expires = DateTimeOffset.UtcNow.AddYears(1)
+                });
+            return RedirectToAction("Privacy");
+        }
+
         public IActionResult Index()
         {
             ViewBag.Welcome = _localization.GetKey("Welcome").Value;
             var currentCulture = Thread.CurrentThread.CurrentCulture.Name;
             return View();
         }
-        [Authorize(Roles = "admin")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Privacy()
         {
             return View();

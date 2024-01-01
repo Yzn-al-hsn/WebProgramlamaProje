@@ -254,21 +254,22 @@ namespace WebProgramalamaProje.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("ClientId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ClientId1")
+                    b.Property<string>("ClientId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("DateTime")
-                        .HasColumnType("datetime2");
 
                     b.Property<int>("DoctorId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("EndDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("StartDateTime")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("ClientId1");
+                    b.HasIndex("ClientId");
 
                     b.HasIndex("DoctorId");
 
@@ -499,7 +500,9 @@ namespace WebProgramalamaProje.Migrations
                 {
                     b.HasOne("WebProgramalamaProje.Models.ApplicationUser", "Client")
                         .WithMany()
-                        .HasForeignKey("ClientId1");
+                        .HasForeignKey("ClientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("WebProgramalamaProje.Models.DoctorModel", "Doctor")
                         .WithMany()

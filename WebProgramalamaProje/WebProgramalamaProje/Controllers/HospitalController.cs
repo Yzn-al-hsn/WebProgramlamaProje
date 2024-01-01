@@ -8,7 +8,7 @@ using WebProgramalamaProje.Models.CombinedModels;
 
 namespace WebProgramalamaProje.Controllers
 {
-    [Authorize(Roles = "admin")]
+    [Authorize(Roles = "Admin")]
     public class HospitalController : Controller
     {
         private readonly ApplicationDbContext _db;

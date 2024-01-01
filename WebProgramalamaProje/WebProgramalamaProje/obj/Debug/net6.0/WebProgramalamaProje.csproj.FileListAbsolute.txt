@@ -510,3 +510,15 @@ C:\Users\MHD OMAR\source\repos\WebProgramlamaProje\WebProgramlamaProje\WebProgra
 C:\Users\MHD OMAR\source\repos\WebProgramlamaProje\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\obj\Debug\net6.0\WebProgramalamaProje.csproj.GenerateResource.cache
 C:\Users\MHD OMAR\source\repos\WebProgramlamaProje\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\obj\Debug\net6.0\en-US\WebProgramalamaProje.resources.dll
 C:\Users\MHD OMAR\source\repos\WebProgramlamaProje\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\obj\Debug\net6.0\tr-TR\WebProgramalamaProje.resources.dll
+C:\Users\Nitro\source\repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\bin\Debug\net6.0\en-US\WebProgramalamaProje.resources.dll
+C:\Users\Nitro\source\repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\bin\Debug\net6.0\tr-TR\WebProgramalamaProje.resources.dll
+C:\Users\Nitro\source\repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Nitro\source\repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Nitro\source\repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Nitro\source\repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Nitro\source\repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Nitro\source\repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\obj\Debug\net6.0\WebProgramalamaProje.Resources.SharedResource.en-US.resources
+C:\Users\Nitro\source\repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\obj\Debug\net6.0\WebProgramalamaProje.Resources.SharedResource.tr-TR.resources
+C:\Users\Nitro\source\repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\obj\Debug\net6.0\WebProgramalamaProje.csproj.GenerateResource.cache
+C:\Users\Nitro\source\repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\obj\Debug\net6.0\en-US\WebProgramalamaProje.resources.dll
+C:\Users\Nitro\source\repos\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje\obj\Debug\net6.0\tr-TR\WebProgramalamaProje.resources.dll

@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\MHD OMAR\source\repos\WebProgramlamaProje\WebProgramlamaProje\WebProgramalamaProje\WebProgramalamaProje
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Appointment/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Appointment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

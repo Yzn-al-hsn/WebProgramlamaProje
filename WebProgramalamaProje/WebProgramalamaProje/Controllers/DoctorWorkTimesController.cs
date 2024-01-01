@@ -3,18 +3,21 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebProgramalamaProje.Data;
 using WebProgramalamaProje.Models;
+using WebProgramalamaProje.Service;
 
 namespace WebProgramalamaProje.Controllers
 {
-    [Authorize(Roles = "admin")]
+    [Authorize(Roles = "Admin")]
 
     public class DoctorWorkTimesController : Controller
     {
         private readonly ApplicationDbContext _db;
+        private readonly LanguageService _localization;
 
-        public DoctorWorkTimesController(ApplicationDbContext db)
+        public DoctorWorkTimesController(ApplicationDbContext db, LanguageService localization)
         {
             _db = db;
+            _localization = localization;
         }
         public async Task<IActionResult> Index(int doctorId)
         {
@@ -60,9 +63,19 @@ namespace WebProgramalamaProje.Controllers
         {
             if (model != null)
             {
-                await _db.DoctorWorkTimes.AddAsync(model);
-                await _db.SaveChangesAsync();
-                return RedirectToAction("Edit", "Doctor", new { id = model.DoctorId });
+                var doctor=await _db.Doctors.FindAsync(model.DoctorId);
+                var clinicWorkTimes = _db.ClinicWorkTimes.Where(a => a.ClinicId == doctor.ClinicId && a.Day==model.Day && a.ShiftStart<=model.ShiftStart && a.ShiftEnd>=model.ShiftEnd);
+
+                if(clinicWorkTimes.Any())
+                {
+                    await _db.DoctorWorkTimes.AddAsync(model);
+                    await _db.SaveChangesAsync();
+                    return RedirectToAction("Edit", "Doctor", new { id = model.DoctorId });
+                }
+                ViewBag.ErrorBool = true;
+                ViewBag.ErrorMsg = _localization.GetKey("DoctorWorkTimeError");
+                
+                return View(model);
             }
             return View();
         }

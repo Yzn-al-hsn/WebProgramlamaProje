@@ -144,6 +144,9 @@
   <data name="City" xml:space="preserve">
     <value>İl</value>
   </data>
+  <data name="Client" xml:space="preserve">
+    <value>Kullanıcı</value>
+  </data>
   <data name="Clinic" xml:space="preserve">
     <value>Poliklinik</value>
   </data>
@@ -164,6 +167,12 @@
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Sil</value>
+  </data>
+  <data name="Doctor" xml:space="preserve">
+    <value>Doktor</value>
+  </data>
+  <data name="DoctorWorkTimeError" xml:space="preserve">
+    <value>doktor çalışma saatleri polikinlik çalışma saatleri içerisinde olmalıdır</value>
   </data>
   <data name="DoctorWorkTimes" xml:space="preserve">
     <value>Doktor Çalışma Saatleri</value>
