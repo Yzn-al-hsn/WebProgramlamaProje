@@ -4,3 +4,71 @@
 @{
     Layout = "_LayoutAdmin";
 }
+
+@model List<WebProgramalamaProje.Models.CombinedModels.HospitalTownFieldsModel>
+
+<h1>@_localization.GetKey("HospitalIndexTitle")</h1>
+
+<p>
+    <a asp-controller="Hospital" asp-action="Create" class="btn btn-primary">@_localization.GetKey("Create")</a>
+</p>
+<div class="card">
+    <div class="card-body">
+        <table class="table">
+
+            <thead>
+                <tr>
+
+                    <th scope="col">@_localization.GetKey("Name")</th>
+                    <th scope="col">@_localization.GetKey("Town")</th>
+                    <th scope="col">Addres</th>
+                    <th scope="col">@_localization.GetKey("FormMailAdress")</th>
+                    <th scope="col">@_localization.GetKey("PhoneNumber")</th>
+
+                    <th>@_localization.GetKey("Edit") & @_localization.GetKey("Delete")</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var hospital in Model)
+                {
+                    <tr id="item-@hospital.Id">
+                        <td>@hospital.HospitalName</td>
+                        <td>@hospital.HospitalTown</td>
+                        <td>@hospital.HospitalAddress</td>
+                        <td>@hospital.HospitalEmail</td>
+                        <td>@hospital.HospitalPhoneNumber</td>
+
+                        <td>
+
+                            <a asp-action="Edit" asp-controller="Hospital" asp-route-hospitalId="@hospital.Id" class="btn btn-warning">@_localization.GetKey("Edit")</a>
+                            <button class="delete-button btn btn-danger" data-id="@hospital.Id">@_localization.GetKey("Delete")</button>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.delete-button').click(function () {
+            var id = $(this).data('id');
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("Delete", "Hospital")',
+                data: { id: id },
+                success: function (response) {
+                    if (response.success) {
+                        $('#item-' + id).remove(); // Remove the item row from the table
+                    } else {
+                        // Handle failure
+                    }
+                }
+            });
+        });
+    });
+</script>

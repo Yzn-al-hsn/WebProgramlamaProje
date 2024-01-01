@@ -1,6 +1,70 @@
-﻿@*
+﻿@model List<WebProgramalamaProje.Models.CombinedModels.ClinicHospitalFieldsModel>;
+
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
     Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Index";
 }
+
+<h1>@_localization.GetKey("ClinicIndexTitle")</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">@_localization.GetKey("Create")</a>
+</p>
+<div class="card">
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @_localization.GetKey("Clinic")
+                    </th>
+                    <th>
+                        @_localization.GetKey("Hospital")
+                    </th>
+                    <th>@_localization.GetKey("Edit") & @_localization.GetKey("Delete")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var clinic in Model)
+                {
+                    <tr id="item-@clinic.Id">
+                        <td>
+                            @clinic.Name
+                        </td>
+                        <td>
+                            @clinic.HospitalName
+                        </td>
+                        <td>
+                            <a class="btn btn-warning" asp-controller="Clinic" asp-route-id="@clinic.Id" asp-action="Edit">@_localization.GetKey("Edit")</a>
+                            <button class="delete-button btn btn-danger" data-id="@clinic.Id">@_localization.GetKey("Delete")</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.delete-button').click(function () {
+            var id = $(this).data('id');
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("Delete", "Clinic")',
+                data: { id: id },
+                success: function (response) {
+                    if (response.success) {
+                        $('#item-' + id).remove(); // Remove the item row from the table
+                    } else {
+                        // Handle failure
+                    }
+                }
+            });
+        });
+    });
+</script>
+

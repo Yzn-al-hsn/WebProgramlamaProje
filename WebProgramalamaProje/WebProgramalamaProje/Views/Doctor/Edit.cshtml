@@ -1,0 +1,124 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Edit";
+}
+
+@model WebProgramalamaProje.Models.CombinedModels.DoctorClinicModel;
+
+
+
+
+<form asp-action="Edit" asp-controller="Doctor" method="post">
+
+    <div class="content-header clearfix">
+        <h1 class="float-left">
+            @_localization.GetKey("Edit") Doctor - @Model.Doctor.Id
+        </h1>
+        <div class="float-right">
+            <button type="submit" value="Save" class="btn btn-primary mt-3">@_localization.GetKey("Submit")</button>
+            <a class="btn btn-secondary mt-3" asp-controller="Doctor" asp-action="Index">@_localization.GetKey("BackToList")</a>
+        </div>
+    </div>
+
+    <input asp-for="Doctor.Id" hidden />
+    <div class="card">
+        <div class="card-body">
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Doctor.Name">@_localization.GetKey("Name")</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input asp-for="Doctor.Name" class="form-control" placeholder="@_localization.GetKey("Name")">
+                    </div>
+                </div>
+                <span asp-validation-for="Doctor.Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Doctor.SurName">@_localization.GetKey("Surname")</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input asp-for="Doctor.SurName" class="form-control" placeholder="@_localization.GetKey("Surname")">
+                    </div>
+                </div>
+                <span asp-validation-for="Doctor.SurName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Doctor.TCNumber">TC</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control" asp-for="Doctor.TCNumber" placeholder="TC">
+                    </div>
+                </div>
+                <span asp-validation-for="Doctor.TCNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Doctor.PhoneNumber">@_localization.GetKey("PhoneNumber")</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" asp-for="Doctor.PhoneNumber" placeholder="@_localization.GetKey("PhoneNumber")">
+                    </div>
+                </div>
+                <span asp-validation-for="Doctor.PhoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Doctor.ClinicId">@_localization.GetKey("Clinic")</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control" asp-for="Doctor.ClinicId">
+                            @foreach (var clinic in Model.Clinics)
+                            {
+                                <option value="@clinic.Id">@clinic.Name</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <span asp-validation-for="Doctor.ClinicId" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<div class="card content-header ">
+    <div class="float-right ">
+        <h5 class="btn btn-info float-left">@_localization.GetKey("DoctorWorkTimes")</h5>
+        <div class="float-right ">
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                @_localization.GetKey("DoctorWorkTimes")
+            </a>
+        </div>
+    </div>
+
+    <div class="card-body content-header">
+        <div class="collapse" id="collapseExample">
+            
+            <div class="card card-body">
+                @await Html.PartialAsync("../DoctorWorkTimes/_DoctorWorkTimes.cshtml",Model.DoctorWorkTimes)
+            </div>
+            <p>
+                <a asp-controller="DoctorWorkTimes" asp-action="Create" asp-route-doctorId="@Model.Doctor.Id" class="btn btn-primary">@_localization.GetKey("Create")</a>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

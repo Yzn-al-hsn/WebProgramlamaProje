@@ -1,0 +1,61 @@
+﻿@model WebProgramalamaProje.Models.CombinedModels.ClinicHospitalModel;
+
+@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Create";
+}
+
+<form asp-action="Create" method="post">
+
+    <div class="content-header clearfix">
+        <h1 class="float-left">
+            @_localization.GetKey("Create")
+        </h1>
+        <div class="float-right">
+            <button type="submit" value="Save" class="btn btn-primary mt-3">@_localization.GetKey("Submit")</button>
+            <a class="btn btn-secondary mt-3" asp-controller="Clinic" asp-action="Index">@_localization.GetKey("BackToList")</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Clinic.Name">@_localization.GetKey("Name")</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input asp-for="Clinic.Name" class="form-control" placeholder="@_localization.GetKey("Name")">
+                    </div>
+                </div>
+                <span asp-validation-for="Clinic.Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Clinic.HospitalId">@_localization.GetKey("Hospital")</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control" asp-for="Clinic.HospitalId">
+                            @foreach (var hospital in Model.Hospitals)
+                            {
+                                <option value="@hospital.Id">@hospital.Name</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <span asp-validation-for="Clinic.HospitalId" class="text-danger"></span>
+            </div>
+
+        </div>
+    </div>
+
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

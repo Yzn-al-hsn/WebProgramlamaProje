@@ -1,0 +1,112 @@
+﻿@using WebProgramalamaProje.Models.Enums;
+@{
+    Layout = "_Layout";
+}
+
+@model WebProgramalamaProje.Models.DTO.RegistrationModel
+
+
+<div class="container">
+    <form class="form" asp-action="Registration">
+        <h2>Registration</h2>
+        <div class="form-group">
+            <label asp-for="FirstName" class="col-sm-3 control-label">First Name</label>
+            <div class="col-sm-9">
+                <input type="text" asp-for="FirstName" placeholder="First Name" class="form-control" autofocus>
+            </div>
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName" class="col-sm-3 control-label">Last Name</label>
+            <div class="col-sm-9">
+                <input type="text" asp-for="LastName" placeholder="Last Name" class="form-control" autofocus>
+            </div>
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="TCNumber" class="col-sm-3 control-label">TC number</label>
+            <div class="col-sm-9">
+                <input type="text" asp-for="TCNumber" placeholder="TC" class="form-control" autofocus>
+            </div>
+            <span asp-validation-for="TCNumber" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email" class="col-sm-3 control-label">Email* </label>
+            <div class="col-sm-9">
+                <input type="email" asp-for="Email" placeholder="Email" class="form-control" name="email">
+            </div>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="col-sm-3 control-label">Password*</label>
+            <div class="col-sm-9">
+                <input type="password" asp-for="Password" placeholder="Password" class="form-control">
+            </div>
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PasswordConfirm" class="col-sm-3 control-label">Confirm Password*</label>
+            <div class="col-sm-9">
+                <input type="password" asp-for="PasswordConfirm" placeholder="Password" class="form-control">
+            </div>
+            <span asp-validation-for="PasswordConfirm" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="GenderId" class="col-sm-3 control-label">Gender</label>
+            <div class="col-sm-9">
+                <select class="form-control" asp-for="GenderId">
+                    @{
+                        List<Gender> genderList = Enum.GetValues(typeof(Gender))
+                        .Cast<Gender>()
+                        .ToList();
+                        for (int i = 0; i < genderList.Count; i++)
+                        {
+                            <option value="@i">@genderList[i]</option>
+                        }
+                    }
+                </select>
+            </div>
+            <span asp-validation-for="GenderId" class="text-danger"></span>
+            
+        </div>
+        <div class="form-group">
+            <label asp-for="StatusId" class="col-sm-3 control-label">Status</label>
+            <div class="col-sm-9">
+                <select class="form-control" asp-for="StatusId">
+                    @{
+                        List<MeritalStatus> statusList = Enum.GetValues(typeof(MeritalStatus))
+                        .Cast<MeritalStatus>()
+                        .ToList();
+                        for (int i = 0; i < statusList.Count; i++)
+                        {
+                            <option value="@i">@statusList[i]</option>
+                        }
+                    }
+                </select>
+            </div>
+            <span asp-validation-for="GenderId" class="text-danger"></span>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Address" class="col-sm-3 control-label">Address</label>
+            <div class="col-sm-9">
+                <input type="text" asp-for="Address" placeholder="Address" class="form-control">
+            </div>
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PhoneNumber" class="col-sm-3 control-label">Phone number </label>
+            <div class="col-sm-9">
+                <input asp-for="PhoneNumber" placeholder="Phone number" class="form-control">
+            </div>
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+        @if (TempData["msg"] != null)
+        {
+            <div class="form-group">
+                <span class="text-info">@TempData["msg"]</span>
+            </div>
+        }
+        <button type="submit" class="btn btn-primary mt-3 btn-block">Register</button>
+    </form> <!-- /form -->
+</div> <!-- ./container -->

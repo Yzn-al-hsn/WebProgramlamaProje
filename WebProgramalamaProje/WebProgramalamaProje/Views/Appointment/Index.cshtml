@@ -1,6 +1,96 @@
-﻿@*
+﻿@model List<WebProgramalamaProje.Models.CombinedModels.AppointmentExtraModel>;
+
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
     Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Index";
 }
+
+<h1>Appointments List</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">@_localization.GetKey("Create")</a>
+</p>
+<div class="card">
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        @_localization.GetKey("Client") @_localization.GetKey("Name")
+                    </th>
+                    <th>
+                        @_localization.GetKey("Doctor") @_localization.GetKey("Name")
+                    </th>
+                    <th>
+                        @_localization.GetKey("Clinic") @_localization.GetKey("Name")
+                    </th>
+                    <th>
+                        @_localization.GetKey("ShiftStart") 
+                    </th>
+                    <th>
+                        @_localization.GetKey("ShiftEnd")
+                    </th>
+                    <th>@_localization.GetKey("Edit") & @_localization.GetKey("Delete")</th>
+                </tr>
+            </thead>
+            <tbody id="item-container">
+                @foreach (var appointment in Model)
+                {
+                    <tr id="item-@appointment.Id">
+
+                        <td>
+                            @appointment.Id
+                        </td>
+                        <td>
+                            @appointment.ClientName
+                        </td>
+                        <td>
+                            @appointment.DoctorName
+                        </td>
+                        <td>
+                            @appointment.ClinicName
+                        </td>
+                        <td>
+                            @appointment.StartDateTime
+                        </td>
+                        <td>
+                            @appointment.EndDateTime
+                        </td>
+                        <td>
+                            <a class="btn btn-warning" asp-controller="Appointment" asp-route-id="@appointment.Id" asp-action="Edit">@_localization.GetKey("Edit")</a>
+
+                            <!-- Item Display -->
+                            <button class="delete-button btn btn-danger" data-id="@appointment.Id">@_localization.GetKey("Delete")</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.delete-button').click(function () {
+            var id = $(this).data('id');
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("Delete", "Appointment")',
+                data: { id: id },
+                success: function (response) {
+                    if (response.success) {
+                        $('#item-' + id).remove(); // Remove the item row from the table
+                    } else {
+                        // Handle failure
+                    }
+                }
+            });
+        });
+    });
+</script>
+
