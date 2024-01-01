@@ -74,7 +74,7 @@
             var id = $(this).data('id');
             $.ajax({
                 type: 'POST',
-                url: '@Url.Action("Delete", "Appointment")',
+                url: '@Url.Action("DeleteAppointment", "Home")',
                 data: { id: id },
                 success: function (response) {
                     if (response.success) {

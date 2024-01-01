@@ -81,6 +81,18 @@ namespace WebProgramalamaProje.Controllers
 
                 if (!doctorWorkTimes.Any())
                 {
+                    model.Users = (from use in _db.Users
+                                   join useRol in _db.UserRoles on use.Id equals useRol.UserId
+                                   join rol in _db.Roles on useRol.RoleId equals rol.Id
+                                   where rol.NormalizedName != "ADMIN"
+                                   select new ApplicationUser
+                                   {
+                                       Id = use.Id,
+                                       FirstName = use.FirstName,
+                                       LastName = use.LastName,
+                                       Email = use.Email,
+                                   }).ToList();
+
                     model.Doctors = (from doc in _db.Doctors
                                      join cli in _db.Clinics on doc.ClinicId equals cli.Id
                                      join hos in _db.Hospital on cli.HospitalId equals hos.Id
@@ -111,6 +123,18 @@ namespace WebProgramalamaProje.Controllers
 
                 if (query.Any() || !startLessThanEnd)
                 {
+                    model.Users = (from use in _db.Users
+                                   join useRol in _db.UserRoles on use.Id equals useRol.UserId
+                                   join rol in _db.Roles on useRol.RoleId equals rol.Id
+                                   where rol.NormalizedName != "ADMIN"
+                                   select new ApplicationUser
+                                   {
+                                       Id = use.Id,
+                                       FirstName = use.FirstName,
+                                       LastName = use.LastName,
+                                       Email = use.Email,
+                                   }).ToList();
+
                     model.Doctors = (from doc in _db.Doctors
                                      join cli in _db.Clinics on doc.ClinicId equals cli.Id
                                      join hos in _db.Hospital on cli.HospitalId equals hos.Id
@@ -185,6 +209,18 @@ namespace WebProgramalamaProje.Controllers
 
                 if (!doctorWorkTimes.Any())
                 {
+                    model.Users = (from use in _db.Users
+                                   join useRol in _db.UserRoles on use.Id equals useRol.UserId
+                                   join rol in _db.Roles on useRol.RoleId equals rol.Id
+                                   where rol.NormalizedName != "ADMIN"
+                                   select new ApplicationUser
+                                   {
+                                       Id = use.Id,
+                                       FirstName = use.FirstName,
+                                       LastName = use.LastName,
+                                       Email = use.Email,
+                                   }).ToList();
+
                     model.Doctors = (from doc in _db.Doctors
                                      join cli in _db.Clinics on doc.ClinicId equals cli.Id
                                      join hos in _db.Hospital on cli.HospitalId equals hos.Id

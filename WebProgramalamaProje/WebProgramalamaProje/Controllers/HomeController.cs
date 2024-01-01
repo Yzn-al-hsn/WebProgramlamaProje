@@ -157,6 +157,19 @@ namespace WebProgramalamaProje.Controllers
 
             return View(Appointments);
         }
+        [HttpPost]
+        public async Task<IActionResult> DeleteAppointment(int id)
+        {
+            var model = await _db.Appointments.FindAsync(id);
+            if (model != null)
+            {
+                _db.Appointments.Remove(model);
+                await _db.SaveChangesAsync();
+
+                return Json(new { success = true, deletedId = id });
+            }
+            return Json(new { error = true });
+        }
 
 
 
