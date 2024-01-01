@@ -213,6 +213,9 @@
   <data name="NavbarLogout" xml:space="preserve">
     <value>Çıkış</value>
   </data>
+  <data name="OutOfDoctorWorkTimes" xml:space="preserve">
+    <value>doktor çalışma saatleri hariç</value>
+  </data>
   <data name="PhoneNumber" xml:space="preserve">
     <value>TelefonNumarası</value>
   </data>

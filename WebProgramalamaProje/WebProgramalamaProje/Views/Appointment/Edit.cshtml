@@ -5,6 +5,19 @@
 
 @model WebProgramalamaProje.Models.CombinedModels.AppointmentDoctorUserModel;
 
+@if (ViewBag.ErrorBool == true)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.ErrorMsg
+    </div>
+}
+
+@if (ViewBag.ErrorBoolTime == true)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.ErrorMsgTime
+    </div>
+}
 
 <form asp-action="Edit" method="post">
 

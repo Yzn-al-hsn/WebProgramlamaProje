@@ -11,6 +11,13 @@
     </div>
 }
 
+@if (ViewBag.ErrorBoolTime == true)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.ErrorMsgTime
+    </div>
+}
+
 <form asp-action="TakeAppointment" method="post">
     <div class="content-header clearfix">
         <h1 class="float-left">
