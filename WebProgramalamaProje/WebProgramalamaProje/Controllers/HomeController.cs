@@ -90,7 +90,7 @@ namespace WebProgramalamaProje.Controllers
                         select x;
 
             var startLessThanEnd = model.Appointment.StartDateTime <= model.Appointment.EndDateTime;
-
+            //ok?
             if (query.Any() ||!startLessThanEnd)
             {
                 model.Doctors = (from doc in _db.Doctors

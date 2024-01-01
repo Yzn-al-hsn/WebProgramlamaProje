@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Appointment/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Appointment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -84,12 +88,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Home/AppointmentList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBcHBvaW50bWVudExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Home/TakeAppointment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUYWtlQXBwb2ludG1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/MHD OMAR/source/repos/WebProgramlamaProje/WebProgramlamaProje/WebProgramalamaProje/WebProgramalamaProje/Views/Hospital/Create.cshtml]
