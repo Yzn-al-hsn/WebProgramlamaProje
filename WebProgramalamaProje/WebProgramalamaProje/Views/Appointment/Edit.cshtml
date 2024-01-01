@@ -1,0 +1,94 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Edit";
+}
+
+@model WebProgramalamaProje.Models.CombinedModels.AppointmentDoctorUserModel;
+
+
+<form asp-action="Edit" method="post">
+
+    <div class="content-header clearfix">
+        <h1 class="float-left">
+            @_localization.GetKey("Edit") @_localization.GetKey("Appointment") - @Model.Appointment.Id
+        </h1>
+        <div class="float-right">
+            <button type="submit" value="Save" class="btn btn-primary mt-3">@_localization.GetKey("Submit")</button>
+            <a class="btn btn-secondary mt-3" asp-controller="Appointment" asp-action="Index">@_localization.GetKey("BackToList")</a>
+        </div>
+    </div>
+
+    <input asp-for="Appointment.Id" hidden />
+
+    <div class="card">
+        <div class="card-body">
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Appointment.StartDateTime">@_localization.GetKey("ShiftStart")</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="datetime-local" asp-for="Appointment.StartDateTime" class="form-control" placeholder="@_localization.GetKey("ShiftStart")">
+                    </div>
+                </div>
+                <span asp-validation-for="Appointment.StartDateTime" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Appointment.EndDateTime">@_localization.GetKey("ShiftEnd")</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="datetime-local" asp-for="Appointment.EndDateTime" class="form-control" placeholder="@_localization.GetKey("ShiftEnd")">
+                    </div>
+                </div>
+                <span asp-validation-for="Appointment.EndDateTime" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Appointment.ClientId">@_localization.GetKey("Client")</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control" asp-for="Appointment.ClientId">
+                            @foreach (var user in Model.Users)
+                            {
+                                <option value="@user.Id">@user.FirstName</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <span asp-validation-for="Appointment.ClientId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <div class="col-md-4">
+                        <label asp-for="Appointment.DoctorId">@_localization.GetKey("Doctor")</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control" asp-for="Appointment.DoctorId">
+                            @foreach (var doctor in Model.Doctors)
+                            {
+                                <option value="@doctor.Id">@doctor.Name</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <span asp-validation-for="Appointment.DoctorId" class="text-danger"></span>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

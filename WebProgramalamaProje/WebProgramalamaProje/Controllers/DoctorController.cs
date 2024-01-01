@@ -31,7 +31,7 @@ namespace WebProgramalamaProje.Controllers
                             ClinicName = clinic.Name
                         };
 
-            var result=await model.OrderByDescending(x => x.Id).ToListAsync();
+            var result = await model.OrderByDescending(x => x.Id).ToListAsync();
 
             return View(result);
         }
@@ -44,8 +44,15 @@ namespace WebProgramalamaProje.Controllers
 
         public async Task<IActionResult> Create()
         {
-            var model=new DoctorClinicModel();
-            model.Clinics=await _db.Clinics.ToListAsync();
+            var model = new DoctorClinicModel();
+            model.Clinics = (from cli in _db.Clinics
+                             join hos in _db.Hospital on cli.HospitalId equals hos.Id
+                             select new ClinicModel
+                             {
+                                 Id = cli.Id,
+                                 Name = cli.Name + " - " + hos.Name,
+                                 HospitalId = cli.HospitalId,
+                             }).ToList();
 
             return View(model);
         }
@@ -53,7 +60,7 @@ namespace WebProgramalamaProje.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(DoctorClinicModel model)
         {
-            if(model.Doctor!=null)
+            if (model.Doctor != null)
             {
                 //we should add validation here
                 //if(model.Doctor.Name==string.Empty)
@@ -74,12 +81,22 @@ namespace WebProgramalamaProje.Controllers
             if (id <= 0)
                 return RedirectToAction("Index");
 
+
+
             var model = new DoctorClinicModel
             {
-                Doctor=await _db.Doctors.FindAsync(id),
-                Clinics=await _db.Clinics.ToListAsync(),
-                DoctorWorkTimes=await _db.DoctorWorkTimes.Where(x=>x.DoctorId==id).ToListAsync()
+                Doctor = await _db.Doctors.FindAsync(id),
+                DoctorWorkTimes = await _db.DoctorWorkTimes.Where(x => x.DoctorId == id).ToListAsync()
             };
+
+            model.Clinics = (from cli in _db.Clinics
+                             join hos in _db.Hospital on cli.HospitalId equals hos.Id
+                             select new ClinicModel
+                             {
+                                 Id = cli.Id,
+                                 Name = cli.Name + " - " + hos.Name,
+                                 HospitalId = cli.HospitalId,
+                             }).ToList();
 
             return View(model);
         }
@@ -87,7 +104,7 @@ namespace WebProgramalamaProje.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(DoctorClinicModel model)
         {
-            if (model!=null && model.Doctor!=null)
+            if (model != null && model.Doctor != null)
             {
                 //we should add validation here
                 //if(model.Doctor.Name==string.Empty)
@@ -105,7 +122,7 @@ namespace WebProgramalamaProje.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var model = await _db.Doctors.FindAsync(id);
-            if(model!=null)
+            if (model != null)
             {
                 _db.Doctors.Remove(model);
                 await _db.SaveChangesAsync();
