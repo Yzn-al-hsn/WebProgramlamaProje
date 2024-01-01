@@ -24,11 +24,19 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">Home</a>
+                    <a asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a class="nav-link"  asp-controller="Home" asp-action="ChangeLanguageAdmin" asp-route-culture="en-US">
+                        <i class="flag-icon flag-icon-gb"></i> English
+                    </a>
                 </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a class="nav-link" asp-controller="Home" asp-action="ChangeLanguageAdmin" asp-route-culture="tr-TR">
+                        <i class="flag-icon flag-icon-gb"></i> Türkçe
+                    </a>
+                </li>
+
             </ul>
 
             <!-- Right navbar links -->
@@ -272,7 +280,7 @@
         <!-- /.control-sidebar -->
     </div>
 
-    
+
     <script src="~/js/Hastane.js" asp-append-version="true"></script>
     <!-- Bootstrap 4 -->
     <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>

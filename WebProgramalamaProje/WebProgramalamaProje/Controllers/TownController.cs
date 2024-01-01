@@ -6,7 +6,7 @@ using WebProgramalamaProje.Models;
 
 namespace WebProgramalamaProje.Controllers
 {
-    [Authorize(Roles = "admin")]
+    [Authorize(Roles = "Admin")]
     public class TownController : Controller
     {
         private readonly ApplicationDbContext _db;

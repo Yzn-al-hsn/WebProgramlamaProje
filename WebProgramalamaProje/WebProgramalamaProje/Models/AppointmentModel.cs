@@ -8,10 +8,11 @@ namespace WebProgramalamaProje.Models
         [Key]
         public int Id { get; set; }
         [ForeignKey(nameof(ApplicationUser))]
-        public int ClientId { get; set; }
+        public string ClientId { get; set; }
         [ForeignKey(nameof(DoctorModel))]
         public int DoctorId { get; set; }
-        public DateTime DateTime { get; set; }
+        public DateTime StartDateTime { get; set; }
+        public DateTime EndDateTime { get; set; }
         public ApplicationUser Client { get; set; }
         public DoctorModel Doctor { get; set; }
     }

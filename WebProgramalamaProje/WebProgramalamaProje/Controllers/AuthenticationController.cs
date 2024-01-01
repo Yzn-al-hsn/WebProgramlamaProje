@@ -85,10 +85,24 @@ namespace WebProgramalamaProje.Controllers
                 PasswordConfirm = "Qazsew321*",
                 Address = "istanbul",
                 PhoneNumber = "5315034026",
+                Role= "Admin"
             };
 
-            model.Role = "admin";
+            var model1 = new RegistrationModel
+            {
+                FirstName = "yazan",
+                LastName = "Alhasan",
+                TCNumber = "99353028076",
+                Email = "b211210580@sakarya.edu.tr",
+                Password = "Qazsew321*",
+                PasswordConfirm = "Qazsew321*",
+                Address = "mersin",
+                PhoneNumber = "5330792499",
+                Role= "Admin"
+            };
+
             var result = await _authService.RegistratiopnAsync(model);
+             await _authService.RegistratiopnAsync(model1);
             return Ok(result);
         }
     }
