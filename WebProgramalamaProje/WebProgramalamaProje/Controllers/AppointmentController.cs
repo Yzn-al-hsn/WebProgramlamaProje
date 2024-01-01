@@ -73,7 +73,7 @@ namespace WebProgramalamaProje.Controllers
             if (model != null && model.Appointment != null)
             {
 
-                var doctorWorkTimes = _db.DoctorWorkTimes.Where(a => a.Id == model.Appointment.DoctorId
+                var doctorWorkTimes = _db.DoctorWorkTimes.Where(a => a.DoctorId == model.Appointment.DoctorId
             && a.Day == (int)model.Appointment.StartDateTime.DayOfWeek
             && a.Day == (int)model.Appointment.EndDateTime.DayOfWeek
             && a.ShiftStart.TimeOfDay <= model.Appointment.StartDateTime.TimeOfDay
@@ -201,7 +201,7 @@ namespace WebProgramalamaProje.Controllers
         {
             if (model != null && model.Appointment != null)
             {
-                var doctorWorkTimes = _db.DoctorWorkTimes.Where(a => a.Id == model.Appointment.DoctorId
+                var doctorWorkTimes = _db.DoctorWorkTimes.Where(a => a.DoctorId == model.Appointment.DoctorId
             && a.Day == (int)model.Appointment.StartDateTime.DayOfWeek
             && a.Day == (int)model.Appointment.EndDateTime.DayOfWeek
             && a.ShiftStart.TimeOfDay <= model.Appointment.StartDateTime.TimeOfDay

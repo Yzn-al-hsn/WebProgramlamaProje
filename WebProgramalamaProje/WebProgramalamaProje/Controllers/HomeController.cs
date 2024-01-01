@@ -80,8 +80,7 @@ namespace WebProgramalamaProje.Controllers
         {
             var user = await _userManager.GetUserAsync(User);
             model.Appointment.ClientId = user.Id;
-
-            var doctorWorkTimes=_db.DoctorWorkTimes.Where(a=>a.Id ==model.Appointment.DoctorId 
+            var doctorWorkTimes=_db.DoctorWorkTimes.Where(a=>a.DoctorId ==model.Appointment.DoctorId 
             &&a.Day==(int)model.Appointment.StartDateTime.DayOfWeek 
             &&a.Day==(int)model.Appointment.EndDateTime.DayOfWeek
             &&a.ShiftStart.TimeOfDay<=model.Appointment.StartDateTime.TimeOfDay
