@@ -138,6 +138,12 @@
   <data name="AdminPanelTowns" xml:space="preserve">
     <value>İlçeler</value>
   </data>
+  <data name="AppointmentError" xml:space="preserve">
+    <value>Bu zamanda başka randevu var, başka zamanlar seç</value>
+  </data>
+  <data name="AppointmentList" xml:space="preserve">
+    <value>Randevu Listesi</value>
+  </data>
   <data name="BackToList" xml:space="preserve">
     <value>Listeye Geri Dön</value>
   </data>
@@ -221,6 +227,9 @@
   </data>
   <data name="Surname" xml:space="preserve">
     <value>Soyad</value>
+  </data>
+  <data name="TakeAppointment" xml:space="preserve">
+    <value>Randevu Al</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>Web Programlama Projesi</value>
