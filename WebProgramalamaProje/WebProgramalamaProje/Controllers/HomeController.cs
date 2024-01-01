@@ -64,10 +64,11 @@ namespace WebProgramalamaProje.Controllers
 
             appointment.Doctors = (from doc in _db.Doctors
                                    join cli in _db.Clinics on doc.ClinicId equals cli.Id
+                                   join hos in _db.Hospital on cli.HospitalId equals hos.Id
                                    select new DoctorModel
                                    {
                                        Id = doc.Id,
-                                       Name = doc.Name + " - " + cli.Name,
+                                       Name = doc.Name + " - " + cli.Name +" - "+hos.Name,
 
                                    }).ToList();
 
@@ -79,6 +80,31 @@ namespace WebProgramalamaProje.Controllers
         {
             var user = await _userManager.GetUserAsync(User);
             model.Appointment.ClientId = user.Id;
+
+            var doctorWorkTimes=_db.DoctorWorkTimes.Where(a=>a.Id ==model.Appointment.DoctorId 
+            &&a.Day==(int)model.Appointment.StartDateTime.DayOfWeek 
+            &&a.Day==(int)model.Appointment.EndDateTime.DayOfWeek
+            &&a.ShiftStart.TimeOfDay<=model.Appointment.StartDateTime.TimeOfDay
+            && a.ShiftEnd.TimeOfDay>=model.Appointment.EndDateTime.TimeOfDay);
+
+            if(!doctorWorkTimes.Any())
+            {
+                model.Doctors = (from doc in _db.Doctors
+                                 join cli in _db.Clinics on doc.ClinicId equals cli.Id
+                                 join hos in _db.Hospital on cli.HospitalId equals hos.Id
+                                 select new DoctorModel
+                                 {
+                                     Id = doc.Id,
+                                     Name = doc.Name + " - " + cli.Name + " - " + hos.Name,
+
+                                 }).ToList();
+
+                ViewBag.ErrorBoolTime = true;
+                ViewBag.ErrorMsgTime = _localization.GetKey("OutOfDoctorWorkTimes");
+
+                return View(model);
+            }
+
 
             var query = from x in _db.Appointments
                         where ((x.StartDateTime <= model.Appointment.StartDateTime && x.EndDateTime >= model.Appointment.StartDateTime)
@@ -95,10 +121,11 @@ namespace WebProgramalamaProje.Controllers
             {
                 model.Doctors = (from doc in _db.Doctors
                                  join cli in _db.Clinics on doc.ClinicId equals cli.Id
+                                 join hos in _db.Hospital on cli.HospitalId equals hos.Id
                                  select new DoctorModel
                                  {
                                      Id = doc.Id,
-                                     Name = doc.Name + " - " + cli.Name,
+                                     Name = doc.Name + " - " + cli.Name + " - " + hos.Name,
 
                                  }).ToList();
 
@@ -107,6 +134,7 @@ namespace WebProgramalamaProje.Controllers
 
                 return View(model);
             }
+
             
 
             await _db.Appointments.AddAsync(model.Appointment);
