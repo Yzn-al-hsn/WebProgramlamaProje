@@ -90,19 +90,71 @@ namespace WebProgramalamaProje.Controllers
         }
         public async Task<IActionResult> Edit(int id)
         {
-            return View();
+            var appointment = new AppointmentDoctorUserModel();
+
+            appointment.Appointment = await _db.Appointments.FindAsync(id);
+
+            appointment.Users = (from use in _db.Users
+                                 join useRol in _db.UserRoles on use.Id equals useRol.UserId
+                                 join rol in _db.Roles on useRol.RoleId equals rol.Id
+                                 where rol.NormalizedName != "ADMIN"
+                                 select new ApplicationUser
+                                 {
+                                     Id = use.Id,
+                                     FirstName = use.FirstName,
+                                     LastName = use.LastName,
+                                     Email = use.Email,
+                                 }).ToList();
+
+
+            appointment.Doctors = (from doc in _db.Doctors
+                                   join cli in _db.Clinics on doc.ClinicId equals cli.Id
+                                   select new DoctorModel
+                                   {
+                                       Id = doc.Id,
+                                       Name = doc.Name + " - " + cli.Name,
+
+                                   }).ToList();
+
+            return View(appointment);
         }
         [HttpPost]
 
         public async Task<IActionResult> Edit(AppointmentModel model)
-        { 
-            return View();
+        {
+            if(model!=null)
+            {
+                HttpClient client = new HttpClient();
+                var Json = JsonConvert.SerializeObject(model);
+                var content = new StringContent(Json, Encoding.UTF8, "application/json");
+                var response = await client.PutAsync($"https://localhost:44318/api/AdminApi/{model.Id}", content);
+                if (response.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Index");
+                }
+            }
+            
+            return RedirectToAction("Index");
+
         }
         [HttpPost]
 
         public async Task<IActionResult> Delete(int id)
         {
-            return View();
+            var appointment = _db.Appointments.Find(id);
+
+            if (appointment != null)
+            {
+                HttpClient client = new HttpClient();
+                var response = await client.DeleteAsync($"https://localhost:44318/api/AdminApi/{appointment.Id}");
+                if (response.IsSuccessStatusCode)
+                {
+                    return Json(new { success = true, deletedId = id });
+                }
+                
+            }
+            return Json(new { error = true });
+
         }
 
     }

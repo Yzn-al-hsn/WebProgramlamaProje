@@ -41,7 +41,7 @@
                                 </ul>
                             </div>
                         </li>
-                        
+
                     </ul>
                     <ul class="navbar-nav flex-grow-1 justify-content-end">
                         @if (!User.Identity.IsAuthenticated)
@@ -60,11 +60,17 @@
                                 </li>
                             }
                             <li class="nav-item">
+                                <a class="nav-link text-dark" asp-action="AppointmentList" asp-controller="Home" class="btn btn-primary" style="color:#fff">@_localization.GetKey("AppointmentList").Value</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-action="TakeAppointment" asp-controller="Home" class="btn btn-primary" style="color:#fff">@_localization.GetKey("TakeAppointment").Value</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Authentication" asp-action="Logout">@_localization.GetKey("NavbarLogout").Value</a>
                             </li>
                         }
                     </ul>
-                    
+
                 </div>
             </div>
         </nav>
